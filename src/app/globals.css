@@ -1,26 +1,350 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-border: #27272a;
+  --color-card: #18181b;
+  --color-card-hover: #1f1f23;
+  --color-accent: #6366f1;
+  --color-accent-cyan: #06b6d4;
+  --color-accent-emerald: #10b981;
+  --font-sans: "Pretendard Variable", var(--font-geist-sans), system-ui,
+    sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===========================
+   LIGHT MODE — full override
+   =========================== */
+:root.light {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-muted: #27272a;
+  --color-border: #d4d4d8;
+  --color-card: #ffffff;
+  --color-card-hover: #f4f4f5;
+  --color-accent: #4f46e5;
+  --color-accent-cyan: #0e7490;
+  --color-accent-emerald: #047857;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #27272a transparent;
+}
+.light * {
+  scrollbar-color: #d4d4d8 transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
+}
+.light ::selection {
+  background: rgba(79, 70, 229, 0.15);
+  color: #111;
+}
+
+/* Noise texture */
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+.light .noise {
+  opacity: 0.01;
+}
+
+/* ===========================
+   Gradient text
+   =========================== */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.light .gradient-text {
+  background: linear-gradient(135deg, #111 0%, #333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===========================
+   Glass card
+   =========================== */
+.glass {
+  background: rgba(24, 24, 27, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(39, 39, 42, 0.8);
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.light .glass {
+  background: #ffffff;
+  backdrop-filter: none;
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.light .glass:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* ===========================
+   Light mode — text overrides
+   Tailwind opacity modifiers produce rgba which can be too faint.
+   Force readable colors in light mode.
+   =========================== */
+
+/* All muted-with-opacity texts → near-black */
+.light [class*="text-muted\/"] {
+  color: #3f3f46 !important;
+}
+
+/* Inner chip backgrounds */
+.light [class*="bg-background\/"] {
+  background: #f4f4f5 !important;
+}
+
+/* Card hover */
+.light .hover\:bg-card-hover:hover {
+  background: #f4f4f5 !important;
+}
+
+/* Border with opacity */
+.light [class*="border-border\/"] {
+  border-color: #d4d4d8 !important;
+}
+
+/* Accent backgrounds in light — slightly more visible */
+.light [class*="bg-accent\/"] {
+  opacity: 1;
+}
+
+/* Badge bg */
+.light .bg-card\/50 {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Muted/30 (scroll indicator etc.) — still subtle */
+.light [class*="text-muted\/30"],
+.light [class*="text-muted\/40"] {
+  color: #71717a !important;
+}
+
+/* Force all text in light mode to be readable */
+.light p, .light span, .light h1, .light h2, .light h3, .light h4, .light li, .light div {
+  color: inherit;
+}
+.light .text-muted {
+  color: #27272a !important;
+}
+.light .text-foreground {
+  color: #000000 !important;
+}
+
+/* Tech stack tags, career stack tags */
+.light [class*="text-\[10px\]"],
+.light [class*="text-\[11px\]"],
+.light [class*="text-\[13px\]"] {
+  color: #3f3f46;
+}
+
+/* font-mono small labels */
+.light .font-mono {
+  color: #52525b;
+}
+
+/* ===========================
+   Grid pattern
+   =========================== */
+.grid-pattern {
+  background-size: 60px 60px;
+  background-image: linear-gradient(
+      to right,
+      rgba(39, 39, 42, 0.3) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(39, 39, 42, 0.3) 1px, transparent 1px);
+}
+.light .grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+/* ===========================
+   Animated gradient border
+   =========================== */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 16px;
+  background: linear-gradient(
+    var(--angle),
+    #6366f1,
+    #06b6d4,
+    #10b981,
+    #6366f1
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: rotate-gradient 4s linear infinite;
+}
+
+@keyframes rotate-gradient {
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* ===========================
+   Typing cursor
+   =========================== */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--color-accent);
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ===========================
+   Interactive orbs
+   =========================== */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+  transition: transform 0.3s ease-out;
+}
+.light .orb {
+  opacity: 0.06;
+  filter: blur(100px);
+}
+
+/* ===========================
+   Spotlight card
+   =========================== */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  background: radial-gradient(
+    350px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+    var(--spotlight-color, rgba(99, 102, 241, 0.08)),
+    transparent 70%
+  );
+}
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+.light .spotlight-card:hover::after {
+  opacity: 0.6;
+}
+
+/* ===========================
+   Skill tag shimmer
+   =========================== */
+.skill-tag {
+  position: relative;
+  overflow: hidden;
+}
+.skill-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transition: left 0.5s;
+}
+.skill-tag:hover::before {
+  left: 100%;
+}
+.light .skill-tag::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 70, 229, 0.08),
+    transparent
+  );
+}
+
+/* ===========================
+   Light mode — button overrides
+   =========================== */
+.light .bg-foreground {
+  background: #111 !important;
+  color: #fff !important;
+}
+.light .text-background {
+  color: #fff !important;
 }
