@@ -26,10 +26,10 @@ const ja: Translations = {
     ],
   },
   highlights: [
-    "Claude Code・Codexで開発自動化を実現",
-    "「なぜ？」「問題点は？」から始めるコード設計",
-    "15 + 14段階の体系的リファクタリング",
-    "RAGパイプラインの設計・実装",
+    "Claude Code・Codex開発自動化",
+    "「なぜ？」から始める設計",
+    "29段階の体系的リファクタリング",
+    "RAGパイプライン設計・実装",
   ],
   stats: [
     { label: "実務プロジェクト", value: "4+", unit: "件" },

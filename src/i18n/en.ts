@@ -26,10 +26,10 @@ const en: Translations = {
     ],
   },
   highlights: [
-    "Dev automation with Claude Code & Codex",
-    "\"Why?\" \"What's the issue?\" — design-first coding",
-    "15 + 14 stage systematic refactoring",
-    "RAG pipeline design & implementation",
+    "Claude Code & Codex automation",
+    "\"Why?\" — design-first coding",
+    "29-stage systematic refactoring",
+    "RAG pipeline design & build",
   ],
   stats: [
     { label: "Production Projects", value: "4+", unit: "" },
