@@ -17,6 +17,9 @@ const SITE_URL = "https://simwoohyun.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  verification: {
+    google: "KsQG-sXZi_XuKDhRFGMviiNTyPpMqA3pf3S0n6AwYG4",
+  },
   title: {
     default: "심우현 | Frontend-focused Full-stack Developer",
     template: "%s | 심우현",
