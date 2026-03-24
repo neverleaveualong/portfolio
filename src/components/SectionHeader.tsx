@@ -10,7 +10,7 @@ interface Props {
 
 export default function SectionHeader({ label, title }: Props) {
   return (
-    <AnimatedSection className="mb-8 sm:mb-12 text-center">
+    <AnimatedSection className="mb-6 sm:mb-8 text-center">
       <span className="mb-3 inline-block font-mono text-xs uppercase tracking-widest text-accent">
         <ScrambleText text={label} speed={20} />
       </span>

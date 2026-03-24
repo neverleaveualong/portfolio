@@ -43,7 +43,7 @@ export default function Projects() {
   const { t } = useApp();
 
   return (
-    <section id="projects" className="relative px-4 sm:px-6 py-20 sm:py-24">
+    <section id="projects" className="relative px-4 sm:px-6 py-14 sm:py-16">
       <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-accent/3 blur-[150px]" />
 
       <div className="relative mx-auto max-w-5xl">

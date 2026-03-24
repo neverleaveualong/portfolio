@@ -21,7 +21,7 @@ export default function Achievements() {
   const { t } = useApp();
 
   return (
-    <section className="relative px-4 sm:px-6 py-14 sm:py-16">
+    <section className="relative px-4 sm:px-6 py-10 sm:py-12">
       <div className="mx-auto max-w-5xl">
         <SectionHeader label={t.achievements.label} title={t.achievements.title} />
 

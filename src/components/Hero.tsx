@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 sm:px-6 pt-20"
+      className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 sm:px-6 pt-20 pb-10"
     >
       <div className="grid-pattern absolute inset-0 opacity-40" />
       <InteractiveOrbs />
@@ -114,7 +114,7 @@ export default function Hero() {
         </div>
 
         {/* Highlights */}
-        <motion.div {...fade(0.45)} className="mt-14 glass rounded-2xl p-5">
+        <motion.div {...fade(0.45)} className="mt-10 glass rounded-2xl p-4 sm:p-5">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {t.highlights.map((h, i) => (
               <div key={i} className="flex items-start gap-2.5 text-[13px] text-muted">

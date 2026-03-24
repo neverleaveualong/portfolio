@@ -34,7 +34,7 @@ export default function Career() {
   const { t } = useApp();
 
   return (
-    <section id="career" className="relative px-4 sm:px-6 py-20 sm:py-24">
+    <section id="career" className="relative px-4 sm:px-6 py-14 sm:py-16">
       <div className="mx-auto max-w-4xl">
         <SectionHeader label={t.career.label} title={t.career.title} />
 

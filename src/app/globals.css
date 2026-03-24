@@ -43,6 +43,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Global text wrapping — prevent orphan words and ugly breaks */
+p, span, div, li, h1, h2, h3, h4 {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 body {
   background: var(--color-background);
   color: var(--color-foreground);

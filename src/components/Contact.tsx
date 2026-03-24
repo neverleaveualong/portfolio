@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative px-4 sm:px-6 py-20 sm:py-24">
+    <section id="contact" className="relative px-4 sm:px-6 py-14 sm:py-16">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[400px] w-[400px] rounded-full bg-accent/5 blur-[120px]" />
 
       <div className="relative mx-auto max-w-2xl text-center">
