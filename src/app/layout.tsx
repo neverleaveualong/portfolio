@@ -25,7 +25,14 @@ export const metadata: Metadata = {
     "React + TypeScript 기반 프로덕션 서비스를 설계하고, Claude Code를 활용해 개발 자동화를 구현하는 풀스택 개발자 심우현의 포트폴리오입니다.",
   keywords: [
     "심우현",
+    "심우현 개발자",
+    "심우현 포트폴리오",
+    "심우현 프론트엔드",
+    "심우현 풀스택",
     "Sim Woohyun",
+    "simwoohyun",
+    "SimWoohyun",
+    "Woohyun Sim",
     "프론트엔드 개발자",
     "풀스택 개발자",
     "React",
@@ -35,6 +42,9 @@ export const metadata: Metadata = {
     "Claude Code",
     "RAG",
     "B2B SaaS",
+    "강원대학교 컴퓨터공학",
+    "더존비즈온 인턴",
+    "하이퍼스타",
   ],
   authors: [{ name: "심우현", url: SITE_URL }],
   creator: "심우현",
@@ -75,11 +85,30 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "심우현",
-  alternateName: "Sim Woohyun",
+  alternateName: ["Sim Woohyun", "simwoohyun", "Woohyun Sim"],
   url: SITE_URL,
+  image: `${SITE_URL}/images/profile.jpg`,
   jobTitle: "Frontend-focused Full-stack Developer",
+  description:
+    "React + TypeScript 기반 프로덕션 서비스를 설계하고, Claude Code를 활용해 개발 자동화를 구현하는 풀스택 개발자.",
   email: "wmr06244@naver.com",
-  sameAs: ["https://github.com/neverleaveualong"],
+  sameAs: [
+    "https://github.com/neverleaveualong",
+    SITE_URL,
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "하이퍼스타",
+  },
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Frontend Developer",
+    occupationLocation: {
+      "@type": "Country",
+      name: "South Korea",
+    },
+    skills: "React, TypeScript, Next.js, Node.js, PostgreSQL, RAG Pipeline",
+  },
   knowsAbout: [
     "React",
     "TypeScript",
@@ -88,10 +117,14 @@ const jsonLd = {
     "PostgreSQL",
     "RAG Pipeline",
     "Claude Code",
+    "B2B SaaS",
+    "LangChain",
+    "Pinecone",
   ],
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "강원대학교",
+    sameAs: "https://www.kangwon.ac.kr",
   },
 };
 
