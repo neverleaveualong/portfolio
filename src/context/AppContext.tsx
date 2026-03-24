@@ -5,6 +5,7 @@ import {
   useContext,
   useState,
   useEffect,
+  useCallback,
   ReactNode,
 } from "react";
 import { Locale, locales, Translations } from "@/i18n";
@@ -16,7 +17,7 @@ interface AppContextType {
   setLocale: (l: Locale) => void;
   t: Translations;
   theme: Theme;
-  toggleTheme: () => void;
+  toggleTheme: (e?: React.MouseEvent) => void;
 }
 
 const AppContext = createContext<AppContextType | null>(null);
@@ -42,8 +43,49 @@ export function AppProvider({ children }: { children: ReactNode }) {
     document.documentElement.classList.toggle("light", theme === "light");
   }, [theme]);
 
-  const toggleTheme = () =>
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  const toggleTheme = useCallback(
+    (e?: React.MouseEvent) => {
+      const x = e?.clientX ?? window.innerWidth / 2;
+      const y = e?.clientY ?? 0;
+
+      // Max radius to cover entire screen from click point
+      const maxRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y)
+      );
+
+      const doc = document.documentElement;
+
+      // Use View Transitions API if available
+      if ("startViewTransition" in document) {
+        doc.style.setProperty("--reveal-x", `${x}px`);
+        doc.style.setProperty("--reveal-y", `${y}px`);
+        doc.style.setProperty("--reveal-r", `${maxRadius}px`);
+
+        const transition = (document as unknown as { startViewTransition: (cb: () => void) => { ready: Promise<void> } }).startViewTransition(() => {
+          setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+        });
+
+        transition.ready.then(() => {
+          doc.animate(
+            [
+              { clipPath: `circle(0px at ${x}px ${y}px)` },
+              { clipPath: `circle(${maxRadius}px at ${x}px ${y}px)` },
+            ],
+            {
+              duration: 500,
+              easing: "ease-in-out",
+              pseudoElement: "::view-transition-new(root)",
+            }
+          );
+        });
+      } else {
+        // Fallback: just toggle instantly
+        setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+      }
+    },
+    []
+  );
 
   return (
     <AppContext.Provider

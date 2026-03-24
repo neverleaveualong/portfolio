@@ -62,7 +62,7 @@ export default function Navigation() {
         <div className="flex items-center gap-1.5">
           {/* Theme toggle */}
           <button
-            onClick={toggleTheme}
+            onClick={(e) => toggleTheme(e)}
             className="flex h-8 w-8 items-center justify-center rounded-lg text-muted hover:text-foreground hover:bg-card transition-colors"
             aria-label="Toggle theme"
           >
