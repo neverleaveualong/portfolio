@@ -1,6 +1,6 @@
 "use client";
 
-import { Trophy, GraduationCap, Cloud } from "lucide-react";
+import { Trophy, GraduationCap, Cloud, Globe } from "lucide-react";
 import { useApp } from "@/context/AppContext";
 import ScrambleText from "./ScrambleText";
 import SectionHeader from "./SectionHeader";
@@ -9,11 +9,13 @@ import AnimatedSection from "./AnimatedSection";
 const iconMap: Record<string, typeof Trophy> = {
   scholarship: GraduationCap,
   prize: Trophy,
+  global: Globe,
   cloud: Cloud,
 };
 const colorMap: Record<string, string> = {
   scholarship: "#6366f1",
   prize: "#f59e0b",
+  global: "#06b6d4",
   cloud: "#10b981",
 };
 
@@ -25,7 +27,7 @@ export default function Achievements() {
       <div className="mx-auto max-w-5xl">
         <SectionHeader label={t.achievements.label} title={t.achievements.title} />
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {t.achievements.items.map((item, i) => {
             const Icon = iconMap[item.icon] || Trophy;
             const color = colorMap[item.icon] || "#6366f1";

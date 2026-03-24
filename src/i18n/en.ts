@@ -211,6 +211,11 @@ const en: Translations = {
         description: "Province-recognized talent — cumulative ₩10M+ scholarship",
       },
       {
+        icon: "global",
+        title: "Waikato University, New Zealand",
+        description: "Korea Scholarship Foundation full grant (₩8M+) · 4-week program",
+      },
+      {
         icon: "cloud",
         title: "Naver Cloud Platform (NCP)",
         description: "NCA course completed — keen on NCP adoption",

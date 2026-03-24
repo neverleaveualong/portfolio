@@ -208,6 +208,11 @@ const ko = {
         description: "강원도가 인정한 인재 — 누적 1,000만원 이상 수령",
       },
       {
+        icon: "global",
+        title: "뉴질랜드 Waikato University 어학연수",
+        description: "한국장학재단 전액 지원 (800만원+) · 4주 과정",
+      },
+      {
         icon: "cloud",
         title: "Naver Cloud Platform (NCP)",
         description: "NCA 교육 이수 — NCP 활용에 긍정적",

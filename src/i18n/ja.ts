@@ -210,6 +210,11 @@ const ja: Translations = {
         description: "江原道認定人材 — 累計1,000万ウォン以上受給",
       },
       {
+        icon: "global",
+        title: "ニュージーランド Waikato University 語学研修",
+        description: "韓国奨学財団全額支援 (800万ウォン+) · 4週間",
+      },
+      {
         icon: "cloud",
         title: "Naver Cloud Platform (NCP)",
         description: "NCA教育修了 — NCP活用に前向き",
