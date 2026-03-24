@@ -34,7 +34,7 @@ export default function Career() {
   const { t } = useApp();
 
   return (
-    <section id="career" className="relative px-6 py-24">
+    <section id="career" className="relative px-4 sm:px-6 py-20 sm:py-24">
       <div className="mx-auto max-w-4xl">
         <SectionHeader label={t.career.label} title={t.career.title} />
 
@@ -43,7 +43,7 @@ export default function Career() {
             const colors = typeColorMap[career.type] || defaultColor;
             return (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="glass group rounded-2xl p-6 transition-all hover:bg-card-hover">
+                <div className="glass group rounded-2xl p-4 sm:p-6 transition-all hover:bg-card-hover">
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     <span className={`rounded-full px-3 py-0.5 text-[11px] font-medium ${colors.bg} ${colors.text}`}>
                       {career.type}

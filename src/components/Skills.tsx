@@ -15,7 +15,7 @@ export default function Skills() {
   const { t } = useApp();
 
   return (
-    <section id="skills" className="relative px-6 py-24">
+    <section id="skills" className="relative px-4 sm:px-6 py-20 sm:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeader label={t.skills.label} title={t.skills.title} />
 

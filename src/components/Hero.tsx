@@ -22,16 +22,16 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 sm:px-6 pt-20"
     >
       <div className="grid-pattern absolute inset-0 opacity-40" />
       <InteractiveOrbs />
 
       <div className="relative z-10 mx-auto max-w-5xl">
-        <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:gap-14">
+        <div className="flex flex-col items-center gap-6 sm:gap-10 md:flex-row md:items-start md:gap-14">
           {/* Photo */}
           <motion.div {...fade(0)} className="shrink-0">
-            <div className="gradient-border relative h-56 w-44 sm:h-64 sm:w-48">
+            <div className="gradient-border relative h-44 w-34 sm:h-64 sm:w-48">
               <Image
                 src="/images/profile.jpg"
                 alt={t.hero.name}
@@ -54,7 +54,7 @@ export default function Hero() {
 
             <motion.h1
               {...fade(0.15)}
-              className="mb-2 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+              className="mb-2 text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
             >
               <span className="gradient-text">
                 <ScrambleText text={t.hero.name} speed={40} />
@@ -81,7 +81,7 @@ export default function Hero() {
 
             <motion.div
               {...fade(0.35)}
-              className="flex flex-wrap items-center gap-3 justify-center md:justify-start"
+              className="flex flex-col sm:flex-row flex-wrap items-center gap-2 sm:gap-3 justify-center md:justify-start w-full sm:w-auto"
             >
               <a
                 href="#projects"
@@ -133,7 +133,7 @@ export default function Hero() {
           {t.stats.map((stat, i) => (
             <div
               key={i}
-              className="glass rounded-xl px-5 py-4 text-center transition-colors hover:bg-card-hover"
+              className="glass rounded-xl px-3 py-3 sm:px-5 sm:py-4 text-center transition-colors hover:bg-card-hover"
             >
               <div className="text-2xl font-bold text-foreground">
                 <CountUp value={stat.value} />

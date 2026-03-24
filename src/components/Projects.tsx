@@ -43,7 +43,7 @@ export default function Projects() {
   const { t } = useApp();
 
   return (
-    <section id="projects" className="relative px-6 py-24">
+    <section id="projects" className="relative px-4 sm:px-6 py-20 sm:py-24">
       <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-accent/3 blur-[150px]" />
 
       <div className="relative mx-auto max-w-5xl">
@@ -65,32 +65,30 @@ export default function Projects() {
                     style={{ background: `linear-gradient(90deg, ${meta.color}, transparent)` }}
                   />
 
-                  <div className="p-6 sm:p-8">
-                    <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
-                      <div>
-                        <div className="mb-2 flex flex-wrap items-center gap-2">
-                          <span className="rounded-full border border-border px-3 py-0.5 text-[11px] text-muted">
-                            {project.type}
-                          </span>
-                          <span
-                            className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-medium"
-                            style={{ backgroundColor: `${meta.color}15`, color: meta.color }}
-                          >
-                            {project.status === "In Progress" ? (
-                              <Sparkles size={10} />
-                            ) : project.status === "Production" ? (
-                              <Rocket size={10} />
-                            ) : (
-                              <CheckCircle2 size={10} />
-                            )}
-                            {project.status}
-                          </span>
-                        </div>
-                        <h3 className="text-2xl font-bold"><ScrambleText text={project.title} speed={25} /></h3>
-                        <p className="mt-1 text-sm text-muted"><ScrambleText text={project.subtitle} speed={12} /></p>
+                  <div className="p-5 sm:p-8">
+                    <div className="mb-4">
+                      <div className="mb-2 flex flex-wrap items-center gap-2">
+                        <span className="rounded-full border border-border px-3 py-0.5 text-[11px] text-muted">
+                          {project.type}
+                        </span>
+                        <span
+                          className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-medium"
+                          style={{ backgroundColor: `${meta.color}15`, color: meta.color }}
+                        >
+                          {project.status === "In Progress" ? (
+                            <Sparkles size={10} />
+                          ) : project.status === "Production" ? (
+                            <Rocket size={10} />
+                          ) : (
+                            <CheckCircle2 size={10} />
+                          )}
+                          {project.status}
+                        </span>
                       </div>
+                      <h3 className="text-xl sm:text-2xl font-bold"><ScrambleText text={project.title} speed={25} /></h3>
+                      <p className="mt-1 text-xs sm:text-sm text-muted"><ScrambleText text={project.subtitle} speed={12} /></p>
 
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 mt-3">
                         {meta.github && (
                           <a
                             href={meta.github}
@@ -117,15 +115,15 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    <p className="mb-5 text-sm leading-relaxed text-muted">
+                    <p className="mb-4 text-xs sm:text-sm leading-relaxed text-muted">
                       {project.description}
                     </p>
 
-                    <div className="mb-5 grid gap-2 sm:grid-cols-2">
+                    <div className="mb-4 grid gap-1.5 sm:gap-2 sm:grid-cols-2">
                       {project.highlights.map((h, j) => (
                         <div
                           key={j}
-                          className="flex items-start gap-2 rounded-lg bg-background/40 px-3 py-2 text-[13px] text-muted"
+                          className="flex items-start gap-2 rounded-lg bg-background/40 px-2.5 py-1.5 sm:px-3 sm:py-2 text-[12px] sm:text-[13px] text-muted"
                         >
                           <ChevronRight
                             size={14}

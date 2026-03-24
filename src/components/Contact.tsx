@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative px-6 py-24">
+    <section id="contact" className="relative px-4 sm:px-6 py-20 sm:py-24">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[400px] w-[400px] rounded-full bg-accent/5 blur-[120px]" />
 
       <div className="relative mx-auto max-w-2xl text-center">
@@ -32,13 +32,13 @@ export default function Contact() {
           <span className="mb-3 inline-block font-mono text-xs uppercase tracking-widest text-accent">
             {t.contact.label}
           </span>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-4xl">
             <ScrambleText text={t.contact.title} speed={15} />
           </h2>
           <p className="mb-2 text-muted">{t.contact.description}</p>
           <p className="mb-10 text-sm text-muted/70">{t.contact.sub}</p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
             <a
               href={`mailto:${EMAIL}`}
               className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all hover:shadow-lg hover:shadow-accent/10"
