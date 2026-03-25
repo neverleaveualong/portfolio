@@ -35,7 +35,7 @@ const en: Translations = {
     { label: "Production Projects", value: "4+", unit: "" },
     { label: "React Components", value: "97", unit: "" },
     { label: "Refactoring Stages", value: "29", unit: "" },
-    { label: "Tests Written", value: "137", unit: "" },
+    { label: "Tests Written", value: "189", unit: "" },
   ],
   career: {
     label: "Experience",
@@ -64,12 +64,15 @@ const en: Translations = {
         period: "Oct — Dec 2025",
         type: "Intern",
         description:
-          "Solo full-stack development of 'TechLens' patent intelligence B2B web app. 262 commits in 4 weeks under senior engineer mentorship.",
+          "Solo full-stack development of 'TechLens' patent intelligence B2B web app. 262 commits, 51 PRs in 4 weeks under senior engineer mentorship.",
         highlights: [
           "Designed & implemented 17 REST APIs (auth, search, presets, favorites, analytics)",
           "JWT dual-token auth with server-side token revocation",
           "KIPRIS API batch processing (5req/200ms throttle, Promise.allSettled)",
-          "14-stage systematic refactoring — 59 PRs, 7 security enhancements",
+          "14-stage refactoring — TanStack Query, code splitting, 7 security fixes",
+          "Vitest 52 tests + MSW mock server infrastructure (custom hook unit tests)",
+          "2026 B2B landing page — typing animation · tab switcher · Playwright screenshots",
+          "Web Vitals: Performance 98–100 · TBT ≤50ms · CLS 0 · SEO 82→92",
         ],
       },
       {
@@ -110,12 +113,13 @@ const en: Translations = {
         type: "Douzone Internship",
         status: "Completed",
         description:
-          "B2B web app for patent search, analysis, and visualization. Solo full-stack of 8 pages + 14-stage refactoring.",
+          "B2B web app for patent search, analysis, and visualization. Solo full-stack of 8 pages + 14-stage refactoring + landing page.",
         highlights: [
-          "JWT dual-token auth + Zustand-based full-stack architecture",
-          "KIPRIS API concurrent batch processing + IPC pre-caching",
-          "Chart.js 3-type dashboard (monthly trends, IPC distribution, status)",
-          "14-stage refactoring — 7 security enhancements",
+          "JWT dual-token auth + KIPRIS API batch processing (5req/200ms, Promise.allSettled)",
+          "14-stage refactoring — TanStack Query, code splitting, 7 security fixes",
+          "Vitest 52 tests + MSW mock server infrastructure",
+          "2026 B2B landing page — interactive hero (typing animation + tab switcher)",
+          "Web Vitals before/after: Performance 100 maintained · TBT ≤50ms · SEO 82→92",
         ],
       },
       {

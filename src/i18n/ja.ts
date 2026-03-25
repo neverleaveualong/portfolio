@@ -35,7 +35,7 @@ const ja: Translations = {
     { label: "実務プロジェクト", value: "4+", unit: "件" },
     { label: "Reactコンポーネント", value: "97", unit: "個" },
     { label: "リファクタリング段階", value: "29", unit: "段階" },
-    { label: "テストカバレッジ", value: "137", unit: "件" },
+    { label: "テストカバレッジ", value: "189", unit: "件" },
   ],
   career: {
     label: "Experience",
@@ -64,12 +64,15 @@ const ja: Translations = {
         period: "2025.10 — 2025.12",
         type: "インターン",
         description:
-          "特許インテリジェンスB2Bウェブアプリ'TechLens'フルスタック単独開発。4週間で262コミット。",
+          "特許インテリジェンスB2Bウェブアプリ'TechLens'フルスタック単独開発。4週間262コミット、51 PR。",
         highlights: [
           "17個REST API設計・実装（認証、検索、プリセット、お気に入り、分析）",
           "JWTデュアルトークン認証 + サーバーサイドトークン失効",
-          "KIPRIS APIバッチ処理（5件/200msスロットル）",
-          "14段階リファクタリング — 59 PRマージ、7つのセキュリティ強化",
+          "KIPRIS APIバッチ処理（5件/200msスロットル、Promise.allSettled）",
+          "14段階リファクタリング — TanStack Query・Zod・code splitting・セキュリティ7件",
+          "Vitest 52件 + MSWテストインフラ構築（カスタムフック単体テスト）",
+          "2026 B2Bランディングページ — タイピングアニメーション・タブswitcher・Playwright実写スクリーンショット",
+          "Web Vitals: Performance 98~100 · TBT ≤50ms · CLS 0 · SEO 82→92",
         ],
       },
       {
@@ -109,12 +112,13 @@ const ja: Translations = {
         type: "Douzoneインターン",
         status: "Completed",
         description:
-          "KIPRIS公共データの特許検索・分析・可視化B2Bウェブアプリ。8ページフルスタック単独開発 + 14段階リファクタリング。",
+          "KIPRIS公共データの特許検索・分析・可視化B2Bウェブアプリ。8ページフルスタック単独開発 + 14段階リファクタリング + ランディングページ。",
         highlights: [
-          "JWTデュアルトークン認証 + Zustandベースフルスタックアーキテクチャ",
-          "KIPRIS API同時バッチ処理 + IPCプリキャッシング",
-          "Chart.js 3種ダッシュボード（月別推移、IPC分布、登録状態）",
-          "14段階リファクタリング — 7つのセキュリティ強化",
+          "JWTデュアルトークン認証 + KIPRIS APIバッチ処理（5件/200ms、Promise.allSettled）",
+          "14段階リファクタリング — TanStack Query導入、code splitting、セキュリティ7件強化",
+          "Vitest 52件 + MSW mockサーバーテストインフラ構築",
+          "2026 B2Bランディングページ — インタラクティブヒーロー（タイピングアニメーション + タブswitcher）",
+          "Web Vitals リファクタリング前後: Performance 100維持 · TBT ≤50ms · SEO 82→92",
         ],
       },
       {

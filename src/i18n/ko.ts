@@ -33,7 +33,7 @@ const ko = {
     { label: "실무급 프로젝트", value: "4+", unit: "개" },
     { label: "프로덕션 React 컴포넌트", value: "97", unit: "개" },
     { label: "체계적 리팩토링 단계", value: "29", unit: "단계" },
-    { label: "테스트 커버리지", value: "137", unit: "건" },
+    { label: "테스트 커버리지", value: "189", unit: "건" },
   ],
   career: {
     label: "Experience",
@@ -62,12 +62,15 @@ const ko = {
         period: "2025.10 — 2025.12",
         type: "인턴",
         description:
-          "특허 인텔리전스 B2B 웹앱 'TechLens' 풀스택 단독 개발. 선임연구원 멘토링 하에 4주 262 커밋.",
+          "특허 인텔리전스 B2B 웹앱 'TechLens' 풀스택 단독 개발. 선임연구원 멘토링 하에 4주 262 커밋, 51 PR.",
         highlights: [
           "17개 REST API 설계·구현 (인증, 특허 검색, 프리셋, 즐겨찾기, 분석)",
           "JWT 이중 토큰(Access+Refresh) 인증 + 서버 사이드 토큰 폐기",
           "KIPRIS API 배치 처리 (5건/200ms 스로틀, Promise.allSettled 에러 내성)",
-          "14단계 체계적 리팩토링 — 59 PR 머지, 7개 보안 강화",
+          "14단계 체계적 리팩토링 — TanStack Query·Zod·code splitting·보안 7건",
+          "Vitest 52건 + MSW 테스트 인프라 구축 (커스텀 훅 단위 테스트)",
+          "2026 B2B 랜딩페이지 — 타이핑 애니메이션·탭 switcher·Playwright 실사 스크린샷",
+          "Web Vitals: Performance 98~100 · TBT ≤ 50ms · CLS 0 · SEO 82→92",
         ],
       },
       {
@@ -107,12 +110,13 @@ const ko = {
         type: "더존비즈온 인턴십",
         status: "Completed",
         description:
-          "KIPRIS 공공데이터 기반 특허 검색, 분석, 시각화 B2B 웹앱. 8개 페이지 풀스택 단독 개발 + 14단계 리팩토링.",
+          "KIPRIS 공공데이터 기반 특허 검색·분석·시각화 B2B 웹앱. 8개 페이지 풀스택 단독 개발 + 14단계 리팩토링 + 랜딩페이지.",
         highlights: [
-          "JWT 이중 토큰 인증 + Zustand 기반 풀스택 아키텍처 설계",
-          "KIPRIS API 동시 배치 처리 + IPC 사전 캐싱 성능 최적화",
-          "Chart.js 3종 대시보드 (월별 추이, IPC 분포, 등록 상태)",
-          "14단계 리팩토링 — 7개 보안 강화 (Rate Limiting, Helmet, Zod 등)",
+          "JWT 이중 토큰 인증 + KIPRIS API 배치 처리 (5건/200ms, Promise.allSettled)",
+          "14단계 리팩토링 — TanStack Query 도입, code splitting, 보안 7건 강화",
+          "Vitest 52건 + MSW mock 서버 테스트 인프라 구축",
+          "2026 B2B 랜딩페이지 — 인터랙티브 히어로 (타이핑 애니메이션 + 탭 switcher)",
+          "Web Vitals 리팩토링 전후: Performance 100 유지 · TBT ≤50ms · SEO 82→92",
         ],
       },
       {
