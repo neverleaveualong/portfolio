@@ -231,7 +231,7 @@ export const projects = [
     ],
     github:
       "https://github.com/Douzone-Keycom-Internship-woohyun-2025",
-    demo: "https://frontend-techlens.vercel.app/login",
+    demo: "https://techlens-app.vercel.app/",
     color: "#06b6d4",
   },
   {
