@@ -185,6 +185,7 @@ export const projects = [
     ],
     stack: ["Next.js", "FastAPI", "LangChain", "Pinecone", "OpenAI", "Docker"],
     github: "https://github.com/neverleaveualong/TechDocs",
+    demo: "https://techdocs-app.vercel.app",
     color: "#6366f1",
   },
   {
