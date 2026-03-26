@@ -128,11 +128,11 @@ const en: Translations = {
         type: "Personal Project",
         status: "In Progress",
         description:
-          "RAG pipeline embedding KIPRIS patent data into vector DB combined with local LLM. Zero-cost architecture with production swap capability.",
+          "RAG pipeline embedding KIPRIS patent data into vector DB combined with OpenAI LLM. Cloud-deployed production architecture.",
         highlights: [
-          "RAG: KIPRIS → Chunking → Embedding(384d) → Pinecone → LLM Answer",
+          "RAG: KIPRIS → Chunking → OpenAI Embedding(1536d) → Pinecone → GPT-4o-mini Answer",
           "Anti-hallucination prompts + mandatory source citation",
-          "Ollama + HuggingFace → $0 ops, OpenAI/Azure hot-swappable",
+          "Local Ollama → OpenAI API migration: embedding model swap + Pinecone index rebuild",
           "Docker containerization + GitHub Actions CI",
         ],
       },

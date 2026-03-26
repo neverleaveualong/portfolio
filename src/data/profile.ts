@@ -176,14 +176,14 @@ export const projects = [
     type: "개인 프로젝트",
     status: "In Progress",
     description:
-      "KIPRIS 특허 데이터를 벡터 DB에 임베딩하고, 로컬 LLM과 결합하여 자연어로 특허를 검색·분석하는 RAG 파이프라인. 운영비 $0으로 프로덕션 전환 가능한 아키텍처.",
+      "KIPRIS 특허 데이터를 벡터 DB에 임베딩하고, OpenAI LLM과 결합하여 자연어로 특허를 검색·분석하는 RAG 파이프라인. 클라우드 배포 대응 아키텍처.",
     highlights: [
-      "RAG 파이프라인: KIPRIS → 청킹(500자) → 임베딩(384d) → Pinecone 저장 → LLM 답변",
+      "RAG 파이프라인: KIPRIS → 청킹(500자) → OpenAI 임베딩(1536d) → Pinecone 저장 → GPT-4o-mini 답변",
       "할루시네이션 방지 프롬프트 + 출처 명시 강제 설계",
-      "Ollama(llama3) + HuggingFace 임베딩 → 운영비 $0, OpenAI/Azure 핫스왑 가능",
+      "로컬 Ollama → OpenAI API 전환: 임베딩 모델 교체 + Pinecone 인덱스 마이그레이션 경험",
       "Docker 컨테이너화 + GitHub Actions CI 자동화",
     ],
-    stack: ["Next.js", "FastAPI", "LangChain", "Pinecone", "Ollama", "Docker"],
+    stack: ["Next.js", "FastAPI", "LangChain", "Pinecone", "OpenAI", "Docker"],
     github: "https://github.com/neverleaveualong/TechDocs",
     color: "#6366f1",
   },

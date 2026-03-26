@@ -127,11 +127,11 @@ const ja: Translations = {
         type: "個人プロジェクト",
         status: "In Progress",
         description:
-          "KIPRIS特許データをベクトルDBに埋め込み、ローカルLLMと組み合わせたRAGパイプライン。運用費$0。",
+          "KIPRIS特許データをベクトルDBに埋め込み、OpenAI LLMと組み合わせたRAGパイプライン。クラウドデプロイ対応。",
         highlights: [
-          "RAG: KIPRIS → チャンキング → 埋め込み(384d) → Pinecone → LLM回答",
+          "RAG: KIPRIS → チャンキング → OpenAI埋め込み(1536d) → Pinecone → GPT-4o-mini回答",
           "ハルシネーション防止プロンプト + 出典明示強制",
-          "Ollama + HuggingFace → $0運用、OpenAI/Azureホットスワップ可能",
+          "ローカルOllama → OpenAI API移行: 埋め込みモデル交換 + Pineconeインデックス再構築",
           "Dockerコンテナ化 + GitHub Actions CI",
         ],
       },

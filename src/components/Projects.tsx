@@ -22,7 +22,7 @@ const projectMeta = [
     color: "#06b6d4",
   },
   {
-    stack: ["Next.js", "FastAPI", "LangChain", "Pinecone", "Ollama", "Docker"],
+    stack: ["Next.js", "FastAPI", "LangChain", "Pinecone", "OpenAI", "Docker"],
     github: "https://github.com/neverleaveualong/TechDocs",
     color: "#6366f1",
   },

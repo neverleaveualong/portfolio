@@ -125,11 +125,11 @@ const ko = {
         type: "개인 프로젝트",
         status: "In Progress",
         description:
-          "KIPRIS 특허 데이터를 벡터 DB에 임베딩 후, 로컬 LLM과 결합한 RAG 파이프라인. 운영비 $0 아키텍처.",
+          "KIPRIS 특허 데이터를 벡터 DB에 임베딩 후, OpenAI LLM과 결합한 RAG 파이프라인. 클라우드 배포 대응 아키텍처.",
         highlights: [
-          "RAG: KIPRIS → 청킹(500자) → 임베딩(384d) → Pinecone → LLM 답변",
+          "RAG: KIPRIS → 청킹(500자) → OpenAI 임베딩(1536d) → Pinecone → GPT-4o-mini 답변",
           "할루시네이션 방지 프롬프트 + 출처 명시 강제 설계",
-          "Ollama + HuggingFace 임베딩 → $0 운영, OpenAI/Azure 핫스왑 가능",
+          "로컬 Ollama → OpenAI API 전환: 임베딩 모델 교체 + Pinecone 인덱스 마이그레이션",
           "Docker 컨테이너화 + GitHub Actions CI 자동화",
         ],
       },
