@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   verification: {
     google: "KsQG-sXZi_XuKDhRFGMviiNTyPpMqA3pf3S0n6AwYG4",
+    other: {
+      "naver-site-verification": "2a2bb203e6ebe00395768538bd2aa4b700267d65",
+    },
   },
   title: {
     default: "심우현 | Frontend-focused Full-stack Developer",
@@ -143,6 +146,7 @@ export default function RootLayout({
     >
       <head>
         <meta name="google-site-verification" content="KsQG-sXZi_XuKDhRFGMviiNTyPpMqA3pf3S0n6AwYG4" />
+        <meta name="naver-site-verification" content="2a2bb203e6ebe00395768538bd2aa4b700267d65" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
