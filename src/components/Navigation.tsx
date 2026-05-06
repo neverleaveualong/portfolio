@@ -15,6 +15,7 @@ export default function Navigation() {
   const navItems = [
     { label: t.nav.home, href: "#hero" },
     { label: t.nav.career, href: "#career" },
+    { label: t.nav.experience, href: "#experience" },
     { label: t.nav.projects, href: "#projects" },
     { label: t.nav.skills, href: "#skills" },
     { label: t.nav.education, href: "#education" },

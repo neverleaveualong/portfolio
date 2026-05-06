@@ -24,10 +24,8 @@ const typeColorMap: Record<string, { bg: string; text: string }> = {
 const defaultColor = { bg: "bg-muted/10", text: "text-muted" };
 
 const stacks = [
-  ["React 19", "TypeScript", "Zustand", "React Query", "Playwright", "Terraform", "AWS"],
-  ["React 18", "TypeScript", "Chart.js", "Express", "PostgreSQL", "Zod"],
-  ["React 19", "TypeScript", "Zustand", "TanStack Query", "Tailwind", "Vitest"],
-  ["Linux", "Network", "Server"],
+  ["React", "TypeScript", "FastAPI", "GitHub Actions", "Claude Actions", "Playwright"],
+  ["React", "TypeScript", "Express", "PostgreSQL", "KIPRIS API", "Zustand"],
 ];
 
 export default function Career() {
