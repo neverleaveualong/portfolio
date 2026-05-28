@@ -61,7 +61,7 @@ export default function Hero() {
               </span>
             </motion.h1>
 
-            <motion.p {...fade(0.2)} className="mb-3 font-mono text-sm text-accent">
+            <motion.p {...fade(0.2)} className="mb-3 font-mono text-xs text-accent sm:text-sm">
               <ScrambleText text={t.hero.title} speed={15} />
             </motion.p>
 
@@ -115,9 +115,9 @@ export default function Hero() {
 
         {/* Highlights */}
         <motion.div {...fade(0.45)} className="mt-10 glass rounded-2xl p-4 sm:p-5">
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
             {t.highlights.map((h, i) => (
-              <div key={i} className="flex items-start gap-2.5 text-[13px] text-muted">
+              <div key={i} className="flex items-center justify-center gap-2 text-[12px] text-muted sm:justify-start lg:whitespace-nowrap lg:text-[11px] xl:text-[12px]">
                 <Zap size={14} className="mt-0.5 shrink-0 text-accent" />
                 <span>{h}</span>
               </div>

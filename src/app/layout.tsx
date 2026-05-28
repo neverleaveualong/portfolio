@@ -24,15 +24,19 @@ export const metadata: Metadata = {
     },
   },
   title: {
-    default: "심우현 | Frontend-focused Full-stack Developer",
+    default: "심우현 개발자 포트폴리오 | Front-End Engineer & AI Agent Engineer",
     template: "%s | 심우현",
   },
   description:
-    "React + TypeScript 기반 프로덕션 서비스를 설계하고, Claude Code를 활용해 개발 자동화를 구현하는 풀스택 개발자 심우현의 포트폴리오입니다.",
+    "심우현 개발자 포트폴리오입니다. React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 정리했습니다.",
   keywords: [
     "심우현",
     "심우현 개발자",
     "심우현 포트폴리오",
+    "심우현 이력서",
+    "심우현 프론트엔드 개발자",
+    "심우현 AI 개발자",
+    "심우현 AI Agent Engineer",
     "심우현 프론트엔드",
     "심우현 풀스택",
     "Sim Woohyun",
@@ -59,16 +63,16 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     alternateLocale: ["en_US", "ja_JP"],
     url: SITE_URL,
-    siteName: "심우현 포트폴리오",
-    title: "심우현 | Frontend-focused Full-stack Developer",
+    siteName: "심우현 개발자 포트폴리오",
+    title: "심우현 개발자 포트폴리오 | Front-End Engineer & AI Agent Engineer",
     description:
-      "Claude Code를 무기로, 시니어처럼 사고하는 주니어. B2B SaaS, 특허 분석, RAG 파이프라인까지.",
+      "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 정리한 심우현 개발자 포트폴리오입니다.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "심우현 | Frontend-focused Full-stack Developer",
+    title: "심우현 개발자 포트폴리오 | Front-End Engineer & AI Agent Engineer",
     description:
-      "Claude Code를 무기로, 시니어처럼 사고하는 주니어. B2B SaaS, 특허 분석, RAG 파이프라인까지.",
+      "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 정리한 심우현 개발자 포트폴리오입니다.",
   },
   robots: {
     index: true,
@@ -89,49 +93,79 @@ export const metadata: Metadata = {
 // JSON-LD structured data
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "심우현",
-  alternateName: ["Sim Woohyun", "simwoohyun", "Woohyun Sim"],
-  url: SITE_URL,
-  image: `${SITE_URL}/images/profile.jpg`,
-  jobTitle: "Frontend-focused Full-stack Developer",
-  description:
-    "React + TypeScript 기반 프로덕션 서비스를 설계하고, Claude Code를 활용해 개발 자동화를 구현하는 풀스택 개발자.",
-  email: "wmr06244@naver.com",
-  sameAs: [
-    "https://github.com/neverleaveualong",
-    SITE_URL,
-  ],
-  worksFor: {
-    "@type": "Organization",
-    name: "하이퍼스타",
-  },
-  hasOccupation: {
-    "@type": "Occupation",
-    name: "Frontend Developer",
-    occupationLocation: {
-      "@type": "Country",
-      name: "South Korea",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "심우현 개발자 포트폴리오",
+      alternateName: ["심우현", "심우현 포트폴리오", "Sim Woohyun Portfolio"],
+      inLanguage: "ko-KR",
     },
-    skills: "React, TypeScript, Next.js, Node.js, PostgreSQL, RAG Pipeline",
-  },
-  knowsAbout: [
-    "React",
-    "TypeScript",
-    "Next.js",
-    "Node.js",
-    "PostgreSQL",
-    "RAG Pipeline",
-    "Claude Code",
-    "B2B SaaS",
-    "LangChain",
-    "Pinecone",
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE_URL}/#profile`,
+      url: SITE_URL,
+      name: "심우현 개발자 포트폴리오",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${SITE_URL}/#person` },
+      inLanguage: "ko-KR",
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: "심우현",
+      alternateName: [
+        "심우현 개발자",
+        "심우현 포트폴리오",
+        "Sim Woohyun",
+        "simwoohyun",
+        "Woohyun Sim",
+      ],
+      url: SITE_URL,
+      image: `${SITE_URL}/images/profile.jpg`,
+      jobTitle: "Front-End Engineer & AI Agent Engineer",
+      description:
+        "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 보유한 개발자.",
+      email: "wmr06244@naver.com",
+      sameAs: [
+        "https://github.com/neverleaveualong",
+        SITE_URL,
+      ],
+      worksFor: {
+        "@type": "Organization",
+        name: "하이퍼스타",
+      },
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Front-End Engineer & AI Agent Engineer",
+        occupationLocation: {
+          "@type": "Country",
+          name: "South Korea",
+        },
+        skills:
+          "React, TypeScript, Next.js, FastAPI, PostgreSQL, RAG Pipeline, AI Agent",
+      },
+      knowsAbout: [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "FastAPI",
+        "PostgreSQL",
+        "RAG Pipeline",
+        "AI Agent",
+        "Claude Code",
+        "B2B SaaS",
+        "LangChain",
+        "Pinecone",
+      ],
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "강원대학교",
+        sameAs: "https://www.kangwon.ac.kr",
+      },
+    },
   ],
-  alumniOf: {
-    "@type": "CollegeOrUniversity",
-    name: "강원대학교",
-    sameAs: "https://www.kangwon.ac.kr",
-  },
 };
 
 export default function RootLayout({

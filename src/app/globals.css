@@ -105,8 +105,8 @@ body {
    Glass card
    =========================== */
 .glass {
-  background: rgba(24, 24, 27, 0.6);
-  backdrop-filter: blur(12px);
+  background: rgba(24, 24, 27, 0.78);
+  backdrop-filter: none;
   border: 1px solid rgba(39, 39, 42, 0.8);
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }

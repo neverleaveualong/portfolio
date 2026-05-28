@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ExternalLink,
@@ -19,26 +20,32 @@ const projectMeta = [
     stack: ["React 18", "TypeScript", "Chart.js", "Express", "PostgreSQL", "Zod"],
     github: "https://github.com/Douzone-Keycom-Internship-woohyun-2025",
     demo: "https://techlens-app.vercel.app/",
+    image: "/project-images/techlens.jpg",
     color: "#06b6d4",
   },
   {
     stack: ["Next.js", "FastAPI", "LangChain", "Pinecone", "OpenAI", "Docker"],
     github: "https://github.com/neverleaveualong/TechDocs",
     demo: "https://techdocs-app.vercel.app",
+    image: "/project-images/techdocs.jpg",
     color: "#6366f1",
   },
   {
     stack: ["React 19", "TypeScript", "Zustand", "TanStack Query", "Tailwind", "Vitest"],
     github: "https://github.com/neverleaveualong/PlayceV",
     demo: "https://playce-app.vercel.app",
+    image: "/project-images/playce.jpg",
     color: "#10b981",
   },
   {
     stack: ["React 19", "TypeScript", "Zustand", "React Query", "Tailwind", "AWS"],
     demo: "https://hyper-star.org",
+    image: "/project-images/hyperstar.jpg",
     color: "#f59e0b",
   },
 ];
+
+const projectOrder = [3, 1, 0, 2];
 
 export default function Projects() {
   const { t } = useApp();
@@ -51,8 +58,9 @@ export default function Projects() {
         <SectionHeader label={t.projects.label} title={t.projects.title} />
 
         <div className="space-y-6">
-          {t.projects.items.map((project, i) => {
-            const meta = projectMeta[i];
+          {projectOrder.map((projectIndex, i) => {
+            const project = t.projects.items[projectIndex];
+            const meta = projectMeta[projectIndex];
             return (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <motion.div
@@ -116,12 +124,50 @@ export default function Projects() {
                       </div>
                     </div>
 
+                    {meta.image && (
+                      <div className="mb-5 overflow-hidden rounded-xl border border-border bg-background/40">
+                        <Image
+                          src={meta.image}
+                          alt={`${project.title} screenshot`}
+                          width={1280}
+                          height={720}
+                          className="h-auto w-full object-cover"
+                          sizes="(max-width: 768px) 100vw, 896px"
+                        />
+                      </div>
+                    )}
+
+                    <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                      {t.projects.oneLinerLabel}
+                    </div>
                     <p className="mb-4 text-xs sm:text-sm leading-relaxed text-muted">
                       {project.description}
                     </p>
 
+                    <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                      {t.projects.achievementsLabel}
+                    </div>
                     <div className="mb-4 grid gap-1.5 sm:gap-2 sm:grid-cols-2">
-                      {project.highlights.map((h, j) => (
+                      {project.achievements.map((h, j) => (
+                        <div
+                          key={j}
+                          className="flex items-start gap-2 rounded-lg bg-background/40 px-2.5 py-1.5 sm:px-3 sm:py-2 text-[12px] sm:text-[13px] text-muted"
+                        >
+                          <ChevronRight
+                            size={14}
+                            className="mt-0.5 shrink-0"
+                            style={{ color: meta.color }}
+                          />
+                          <span>{h}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                      {t.projects.roleLabel}
+                    </div>
+                    <div className="mb-4 grid gap-1.5 sm:gap-2 sm:grid-cols-2">
+                      {project.role.map((h, j) => (
                         <div
                           key={j}
                           className="flex items-start gap-2 rounded-lg bg-background/40 px-2.5 py-1.5 sm:px-3 sm:py-2 text-[12px] sm:text-[13px] text-muted"

@@ -13,10 +13,10 @@ const ja: Translations = {
   hero: {
     badge: "求職中",
     name: "シム・ウヒョン",
-    title: "AI & Full-Stack Developer",
-    tagline: "フロントエンドからバックエンド、RAGベースAI機能まで拡張する開発者",
+    title: "Front-End Engineer & AI Agent Engineer",
+    tagline: "ユーザー画面とAI検索フローを設計する開発者",
     description:
-      "コンピュータ工学を専攻し、Reactフロントエンド、Express/FastAPIバックエンド、RAGベースAI検索まで開発範囲を広げてきました。AIスタートアップとDouzone ICTインターンで、サービス開発・QA・文書化・デプロイの流れを経験しました。",
+      "Reactベースのユーザー画面を設計し、FastAPIとRAGパイプラインでAI検索サービスを実装してきました。AIスタートアップとICTインターンで、サービス開発・QA・文書化・デプロイの流れを経験しました。",
     cta: "プロジェクトを見る",
     email: "メール",
     typingTexts: [
@@ -27,10 +27,10 @@ const ja: Translations = {
     ],
   },
   highlights: [
-    "AIスタートアップCES2026前の開発・QA経験",
-    "Douzone ICT / KeyCom インターンでのフルスタック開発",
-    "React · FastAPI · RAGベースAI検索",
-    "課題再現 · 文書化 · デプロイを考慮した開発",
+    "CES2026前AI SaaS開発・QA",
+    "ICTインターン フルスタック開発",
+    "React · FastAPI · RAG検索",
+    "再現 · 文書化 · デプロイ",
   ],
   stats: [
     { label: "インターン", value: "2", unit: "回" },
@@ -109,6 +109,9 @@ const ja: Translations = {
   projects: {
     label: "Selected Works",
     title: "プロジェクト",
+    oneLinerLabel: "一行紹介",
+    achievementsLabel: "主な成果",
+    roleLabel: "担当役割",
     items: [
       {
         title: "TechLens",
@@ -116,14 +119,17 @@ const ja: Translations = {
         type: "Douzoneインターン",
         status: "Completed",
         description:
-          "Douzone ICTインターンで企画・開発・デプロイした特許インテリジェンスB2Bウェブアプリです。競合企業の特許出願動向を日付・IPC・登録状態で確認できます。",
-        highlights: [
-          "出願人名ベース検索で企業別特許リストと技術動向を確認",
-          "IPC分布、月別出願推移、登録状態をチャートで可視化",
-          "お気に入りとメモ機能で関心特許を継続的に追跡",
-          "React + TypeScriptフロントエンドとExpress + PostgreSQLバックエンド開発",
-          "ZustandとReact Queryでユーザー状態とサーバー状態を分離",
-          "KIPRIS API制限を経験し、内部DB保存・定期更新構造の必要性を学習",
+          "B2Bユーザーが競合企業の技術動向を素早く把握できるよう、公開特許データを検索・分析ダッシュボードとして提供したフルスタックサービスです。",
+        achievements: [
+          "検索、詳細表示、お気に入り、企業別分析など17個のREST APIを実装",
+          "KIPRIS APIレスポンスをPostgreSQL保存・照会フローに接続",
+          "IPC分布、月別出願推移、技術分野分析ダッシュボードを実装",
+          "JWT認証、Refresh Token Rotation、入力検証などのセキュリティフローを反映",
+        ],
+        role: [
+          "サービス企画からフロントエンド、バックエンド、DBまで単独開発",
+          "外部APIレスポンス構造を分析し検索条件と保存項目を設計",
+          "インターン終了後、14段階のリファクタリングで保守性と安定性を改善",
         ],
       },
       {
@@ -132,14 +138,17 @@ const ja: Translations = {
         type: "個人プロジェクト",
         status: "In Progress",
         description:
-          "TechLensの条件検索の限界を自然語RAG検索に高度化したプロジェクトです。アイデアや既知の特許情報から関連特許と文書を探せるよう設計しました。",
-        highlights: [
-          "KIPRIS特許データを収集しLangChainベースRAGパイプラインを構成",
-          "特許データの長さ特性を分析し800文字基準チャンクを適用",
-          "BM25 + Vector検索とRRFでキーワード・意味検索を補完",
-          "FastAPIバックエンドとNext.jsフロントエンドで検索・回答フローを実装",
-          "RAGASとユーザーフィードバックでAI回答品質確認フローを構築",
-          "今後AI Agentとデータ収集・更新パイプライン高度化を計画",
+          "TechLensで構築した特許検索・分析構造をRAGベースAI検索へ拡張し、自然語質問から関連特許と根拠文書を探せるようにしたサービスです。",
+        achievements: [
+          "特許文書のチャンク化、埋め込み、ベクトルDB保存パイプラインを実装",
+          "BM25 + Vector Search + RRFによるハイブリッド検索構造を設計",
+          "質問ベースの検索結果を根拠文書とAI回答として提供",
+          "RAGASベース評価フローで検索・回答品質を点検",
+        ],
+        role: [
+          "個人プロジェクトとして企画、アーキテクチャ、フロントエンド、バックエンドを全体実装",
+          "検索失敗原因をチャンク、検索方式、回答根拠単位で分析",
+          "特許検索を単純な一覧照会から質問ベースの情報探索へ転換",
         ],
       },
       {
@@ -148,14 +157,17 @@ const ja: Translations = {
         type: "チーム + ソロリファクタリング",
         status: "Completed",
         description:
-          "スタジアムに行かず友人と飲食店でスポーツ中継を楽しみたいユーザー向けの地図ベース検索サービスです。チーム開発後に単独で構造改善を行いました。",
-        highlights: [
-          "Kakao Mapsベースの周辺スポーツ中継飲食店検索を実装",
-          "種目・リーグ・日付フィルタで今日の中継予定を位置ベースで確認",
-          "React Queryでサーバー状態、Zustandで地図・検索UI状態を分離",
-          "フロントエンド開発者としてバックエンドメンバーとAPI仕様を調整",
-          "チーム開発後、構造・状態管理・性能・テスト中心にリファクタリング",
-          "店舗管理と中継修正フローのUX改善を今後の課題として整理",
+          "スポーツ中継を行う飲食店を地図、種目、リーグ、日付で探せる位置情報サービスで、チーム開発後に性能・テスト・構造を単独改善しました。",
+        achievements: [
+          "フロントエンド全体コミット66%に貢献し、地図・詳細・お気に入り・マイページを実装",
+          "チーム開発後、15段階61PRの単独リファクタリングを実施",
+          "コード分割で初期バンドルサイズを42%削減",
+          "Vitest・Playwrightベースの100件以上のテストとGitHub Actions CIを構築",
+        ],
+        role: [
+          "Kakao Mapsベースのマーカー、位置検索、店舗詳細画面を開発",
+          "React QueryとZustandでサーバー状態とUI状態を分離",
+          "不要コード削除、ドメイン構造再編、エラー復旧フローを改善",
         ],
       },
       {
@@ -164,14 +176,17 @@ const ja: Translations = {
         type: "プロダクション",
         status: "Production",
         description:
-          "AIインフルエンサーマーケティングB2B SaaSスタートアップで、CES2026前に画面改善、QA、自動化ワークフロー、ランディングページ作業に参加しました。",
-        highlights: [
-          "CES2026向けサービス紹介ランディングページ導入とSEO最適化に参加",
-          "React/TypeScriptベースのクリエイター検索・キャンペーン管理画面を改善",
-          "FastAPIベースRAG機能連携とDB cascade問題を確認",
-          "反復QAと忙しい開発サイクルの中で再現・文書化を実施",
-          "GitHub ActionsとClaude ActionsによるAIベース検証フローを経験",
-          "PlaywrightログとスクリーンショットでPR検証信頼性を高める流れに参加",
+          "CES2026公開を控えたAIインフルエンサーマーケティングB2B SaaSで、画面、API、データフロー、RAG回答結果を点検し、デモ安定化に参加しました。",
+        achievements: [
+          "主要画面フローと例外ケースをQAチェックリスト化",
+          "API/RAG連携イシューを再現し修正方向を文書化",
+          "GitHub Actions・Claude ActionsベースのQA自動化改善に参加",
+          "CES2026向けランディングページとSEO改善に参加",
+        ],
+        role: [
+          "QAからフロントエンド修正、デバッグ支援まで役割を拡張",
+          "画面表示、サーバーレスポンス、データ処理過程を分けて原因を追跡",
+          "修正内容と残課題を文書化し、チームの共有基準を整備",
         ],
       },
     ],

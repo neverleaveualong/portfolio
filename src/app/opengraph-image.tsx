@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "심우현 | Frontend-focused Full-stack Developer";
+export const alt = "심우현 개발자 포트폴리오 | Front-End Engineer & AI Agent Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -91,7 +91,7 @@ export default async function Image() {
                 background: "#10b981",
               }}
             />
-            Frontend-focused Full-stack Developer
+            Front-End Engineer & AI Agent Engineer
           </div>
 
           {/* Name */}
@@ -105,7 +105,7 @@ export default async function Image() {
               color: "transparent",
             }}
           >
-            심우현
+            심우현 개발자 포트폴리오
           </div>
 
           {/* Tagline */}
@@ -118,7 +118,7 @@ export default async function Image() {
               lineHeight: 1.4,
             }}
           >
-            Claude Code를 무기로, 시니어처럼 사고하는 주니어
+            React · FastAPI · RAG · AI Agent
           </div>
 
           {/* Tech badges */}

@@ -13,10 +13,10 @@ const en: Translations = {
   hero: {
     badge: "Open to work",
     name: "Woohyun Sim",
-    title: "AI & Full-Stack Developer",
-    tagline: "Expanding from frontend to backend and RAG-based AI features.",
+    title: "Front-End Engineer & AI Agent Engineer",
+    tagline: "Building user-facing products and AI search workflows.",
     description:
-      "Computer science graduate with experience across React frontend, Express/FastAPI backend, and RAG-based AI search. Through AI startup and Douzone ICT internship experience, I have worked on service development, QA, documentation, and deployment workflows.",
+      "I build React-based user interfaces and AI search services with FastAPI and RAG pipelines. Through AI startup and ICT internship experience, I have worked on service development, QA, documentation, and deployment workflows.",
     cta: "View Projects",
     email: "Email",
     typingTexts: [
@@ -27,10 +27,10 @@ const en: Translations = {
     ],
   },
   highlights: [
-    "AI startup CES2026 pre-launch development and QA",
-    "Douzone ICT / KeyCom full-stack internship",
-    "React · FastAPI · RAG-based AI search",
-    "Issue reproduction · documentation · deployment-aware development",
+    "Pre-CES2026 AI SaaS dev · QA",
+    "ICT internship full-stack build",
+    "React · FastAPI · RAG search",
+    "Reproduce · document · deploy",
   ],
   stats: [
     { label: "Internships", value: "2", unit: "" },
@@ -109,6 +109,9 @@ const en: Translations = {
   projects: {
     label: "Selected Works",
     title: "Projects",
+    oneLinerLabel: "One-liner",
+    achievementsLabel: "Key Outcomes",
+    roleLabel: "My Role",
     items: [
       {
         title: "TechLens",
@@ -116,14 +119,17 @@ const en: Translations = {
         type: "Douzone Internship",
         status: "Completed",
         description:
-          "Patent intelligence B2B web app planned, developed, and deployed during the Douzone ICT internship. It helps users inspect competitor patent trends by date, IPC, and registration status.",
-        highlights: [
-          "Applicant-based search for company patent lists and technology flow",
-          "Visualized IPC distribution, monthly filing trends, and registration status",
-          "Built favorites and memo features to track patents continuously",
-          "Developed React + TypeScript frontend and Express + PostgreSQL backend",
-          "Separated user state and server state with Zustand and React Query",
-          "Learned the need for internal DB caching and scheduled refreshes after KIPRIS API limits",
+          "A full-stack B2B patent intelligence dashboard that turns public patent data into searchable company technology trends and analysis views.",
+        achievements: [
+          "Implemented 17 REST APIs for search, detail views, favorites, and company analysis",
+          "Connected KIPRIS API responses to PostgreSQL storage and query flows",
+          "Built dashboards for IPC distribution, monthly filing trends, and technology fields",
+          "Applied JWT auth, refresh token rotation, and input validation flows",
+        ],
+        role: [
+          "Owned planning, frontend, backend, and database implementation end to end",
+          "Analyzed external API response structures and designed searchable data fields",
+          "Improved maintainability and stability through a 14-step refactoring after the internship",
         ],
       },
       {
@@ -132,14 +138,17 @@ const en: Translations = {
         type: "Personal Project",
         status: "In Progress",
         description:
-          "An AI search upgrade from TechLens' condition-based patent search to natural-language RAG search, helping users find related patents and documents from ideas or known patent information.",
-        highlights: [
-          "Collected KIPRIS patent data and built a LangChain-based RAG pipeline",
-          "Analyzed patent text length and applied 800-character chunking",
-          "Combined BM25 + Vector search with RRF for hybrid retrieval",
-          "Implemented search and answer flow with FastAPI backend and Next.js frontend",
-          "Built answer quality checks with RAGAS and user feedback",
-          "Planned future AI Agent and data collection/refresh pipeline upgrades",
+          "A RAG-based AI search service that extends TechLens from condition-based patent search into natural-language patent and evidence retrieval.",
+        achievements: [
+          "Built patent chunking, embedding, and vector database indexing pipelines",
+          "Designed BM25 + Vector Search + RRF hybrid retrieval",
+          "Returned question-based search results with source documents and AI answers",
+          "Added a RAGAS-based evaluation flow to inspect retrieval and answer quality",
+        ],
+        role: [
+          "Individually owned planning, architecture, frontend, and backend implementation",
+          "Debugged search failures by separating chunking, retrieval strategy, and answer grounding",
+          "Converted patent search from list lookup into question-based information exploration",
         ],
       },
       {
@@ -148,14 +157,17 @@ const en: Translations = {
         type: "Team + Solo Refactoring",
         status: "Completed",
         description:
-          "Map-based restaurant search service for users who want to watch sports broadcasts with friends outside stadiums. Built as a DevCourse team project and later improved through solo refactoring.",
-        highlights: [
-          "Implemented Kakao Maps-based nearby sports broadcasting restaurant search",
-          "Provided location-based schedule view with sport, league, and date filters",
-          "Separated server state with React Query and map/search UI state with Zustand",
-          "Collaborated with backend teammates on API contracts as frontend developer",
-          "Refactored structure, state management, performance, and testing after the team project",
-          "Identified owner-side restaurant management and broadcast-edit UX as future improvements",
+          "A location-based service for finding sports-broadcasting restaurants by map, sport, league, and date, later improved through solo performance and test refactoring.",
+        achievements: [
+          "Contributed 66% of frontend commits and built map, detail, favorites, and mypage flows",
+          "Completed a 15-step, 61-PR solo refactoring after the team project",
+          "Reduced initial bundle size by 42% through code splitting",
+          "Built 100+ Vitest/Playwright tests and GitHub Actions CI",
+        ],
+        role: [
+          "Developed Kakao Maps markers, location search, and restaurant detail screens",
+          "Separated server state with React Query and UI state with Zustand",
+          "Removed dead code, reorganized domain structure, and improved error recovery",
         ],
       },
       {
@@ -164,14 +176,17 @@ const en: Translations = {
         type: "Production",
         status: "Production",
         description:
-          "AI influencer marketing B2B SaaS startup work before CES2026 launch, covering service UI improvements, QA, automation workflows, and landing page work.",
-        highlights: [
-          "Participated in landing page introduction and SEO optimization for CES2026",
-          "Improved creator search and campaign management screens with React/TypeScript",
-          "Investigated FastAPI-based RAG integration and DB cascade issues",
-          "Documented reproducible QA issues during busy development cycles",
-          "Experienced AI-assisted validation workflows with GitHub Actions and Claude Actions",
-          "Participated in PR validation using Playwright logs and screenshots",
+          "Pre-CES2026 stabilization work for an AI influencer marketing B2B SaaS, covering UI, API, data flow, and RAG response checks.",
+        achievements: [
+          "Structured QA checklists for main screens and edge cases",
+          "Reproduced API/RAG integration issues and documented fix directions",
+          "Contributed to QA automation with GitHub Actions and Claude Actions",
+          "Supported CES2026 landing page and SEO improvements",
+        ],
+        role: [
+          "Expanded from QA into frontend fixes and debugging support",
+          "Traced issues across UI display, server responses, and data processing",
+          "Documented fixes and remaining issues so the team could align on status",
         ],
       },
     ],

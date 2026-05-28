@@ -27,7 +27,7 @@ export default function Skills() {
 
             return (
               <AnimatedSection key={key} delay={i * 0.08}>
-                <div className="glass group rounded-2xl p-6 transition-all hover:bg-card-hover">
+                <div className="glass group rounded-2xl p-5 transition-all hover:bg-card-hover sm:p-6">
                   <div className="mb-4 flex items-center gap-3">
                     <div
                       className="flex h-9 w-9 items-center justify-center rounded-lg"
@@ -37,11 +37,11 @@ export default function Skills() {
                     </div>
                     <h3 className="text-sm font-semibold">{category.label}</h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                     {category.items.map((item) => (
                       <span
                         key={item}
-                        className="skill-tag rounded-lg bg-background/60 px-3 py-1.5 text-xs text-muted transition-colors hover:text-foreground"
+                        className="skill-tag flex min-h-8 items-center justify-center rounded-lg bg-background/60 px-2.5 py-1.5 text-center text-[11px] leading-tight text-muted transition-colors hover:text-foreground sm:text-xs"
                       >
                         {item}
                       </span>
