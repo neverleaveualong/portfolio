@@ -42,11 +42,11 @@ const ko = {
     items: [
       {
         company: "하이퍼스타",
-        role: "Frontend Engineer Intern",
+        role: "Frontend / Backend / QA Intern",
         period: "2025.12 — 2026.03",
         type: "인턴",
         description:
-          "AI 인플루언서 마케팅 B2B SaaS의 CES2026 출시작 개발에 참여하여, RAG 엔진 연동 및 QA 자동화 파이프라인 구축을 주도했습니다.",
+          "KAIST Global TIPS 선정 AI 인플루언서 마케팅 B2B SaaS 스타트업에서 CES2026 출시 전 서비스 개발 및 QA 자동화 파이프라인 구축을 담당했습니다.",
         highlights: [
           "RAG 검색 기능의 연동 누락을 확인하여 직접 백엔드 연동 및 React Hook으로 추상화 구현",
           "Claude Actions 기반 자동화 워크플로우 POC 설계 및 도입으로 수동 QA 병목 획기적 개선",
@@ -60,7 +60,7 @@ const ko = {
         period: "2025.10 — 2025.11",
         type: "인턴",
         description:
-          "대량의 특허 데이터를 분석하는 B2B 인텔리전스 솔루션 TechLens를 기획·개발했으며, 기업용 보안 및 안정성 기준 확립에 기여했습니다.",
+          "개발본부 인턴십에서 대량의 특허 데이터를 분석하는 B2B 인텔리전스 솔루션 TechLens를 기획·개발했으며, 기업용 보안 및 안정성 기준 확립에 기여했습니다.",
         highlights: [
           "외부 API(KIPRIS) 과부하 방지를 위해 Concurrency 제어 기반 배치 스로틀링 직접 구현",
           "Raw SQL 파라미터 바인딩을 적용하여 ORM N+1 문제 회피 및 대규모 집계 쿼리 최적화",
@@ -72,34 +72,33 @@ const ko = {
   },
   experience: {
     label: "Experience Plus",
-    title: "주요 기술 기여",
+    title: "교육 · 운영 경험",
     items: [
       {
-        title: "PlayceV 아키텍처 고도화",
-        role: "Frontend Architecture Leader",
-        period: "2025.08 — 2026.03",
-        type: "단독 리팩토링",
+        title: "프로그래머스 데브코스 6기",
+        role: "웹 풀 사이클 개발 과정 (TypeScript)",
+        period: "2025.01 — 2025.07",
+        type: "교육",
         description:
-          "팀 프로젝트 종료 후 시스템의 한계를 스스로 정의하고, 61개의 PR을 통해 프론트엔드 아키텍처를 단독으로 전면 재설계했습니다.",
+          "웹 풀 사이클 과정에서 팀 프로젝트를 수행했으며, 종료 후 시스템 한계를 극복하기 위해 61개의 PR을 통한 단독 아키텍처 고도화를 완수했습니다.",
         highlights: [
+          "스포츠 중계 식당 검색 서비스 Playce의 프론트엔드 메인 개발 및 66% 커밋 기여",
           "Vite manualChunks 및 lazy() 도입으로 초기 번들 크기 42% 감소 및 로딩 속도 최적화",
-          "ErrorBoundary를 통한 부분 크래시 격리 및 Axios 401 자동 복구 흐름 구축",
-          "Playwright와 Vitest를 이용한 테스트 자동화 인프라 구축으로 코드 안정성 확보",
-          "컴포넌트 책임 분리 및 도메인 중심 폴더 구조 재편으로 유지보수 비용 대폭 절감",
+          "Zustand와 TanStack Query의 책임 분리를 통한 지도 UI 리렌더링 병목 해결",
+          "ErrorBoundary를 통한 부분 크래시 격리 및 Playwright 테스트 자동화 인프라 구축",
         ],
       },
       {
-        title: "RAG ➜ 멀티 에이전트 AX 전환",
-        role: "AI Application Architect",
-        period: "2026.03 — 현재",
-        type: "개인 프로젝트",
+        title: "강원대 교양교육원",
+        role: "System Administrator",
+        period: "2023.08 — 2025.01",
+        type: "근무",
         description:
-          "단순 검색을 넘어 복잡한 법적 분석을 수행하는 지능형 에이전트 시스템으로의 AX(AI Transformation) 전 과정을 주도했습니다.",
+          "교내 전산 실습 환경 운영을 지원하며 서버·네트워크 장애 대응과 사용자 지원 경험을 쌓았습니다.",
         highlights: [
-          "독립항 추출 및 구성요소 분해를 수행하는 특화 에이전트 간 협업 워크플로우 설계",
-          "RAGAS 기반 답변 품질 평가 지표(Faithfulness 0.81) 도입 및 피드백 개선 루프 구축",
-          "FastAPI Async Generator를 이용한 NDJSON 형식의 실시간 스트리밍 인프라 구축",
-          "특허 도메인 분석을 통한 800자 청킹 최적화로 문맥 유지 및 답변 신뢰도 향상",
+          "전산실습실 서버와 네트워크 장비 운영 지원 및 장애 1차 복구",
+          "학생·교직원 사용 환경에 맞춘 기술 지원을 통한 안정적인 실습 환경 유지",
+          "운영 업무를 통해 시스템 안정성과 사용자 관점의 중요성 체득",
         ],
       },
     ],
@@ -137,12 +136,12 @@ const ko = {
           "어려운 특허 용어를 몰라도 자연어 질문만으로 관련 특허를 찾고, AI 에이전트가 침해 여부까지 심층 분석하는 AX 플랫폼입니다.",
         achievements: [
           "SSE(Server-Sent Events) 스트리밍 도입으로 체감 대기 시간 80% 단축 (23s → 3s)",
-          "특화 에이전트 간 협업 워크플로우 설계를 통한 보고서 자동 생성 구현",
-          "RAGAS 기반 품질 평가를 통한 답변 신뢰도(Faithfulness) 0.81 확보",
+          "독립항 추출 및 구성요소 분해를 수행하는 특화 에이전트 간 협업 워크플로우 설계",
+          "RAGAS 기반 답변 품질 평가 지표(Faithfulness 0.81) 및 피드백 개선 루프 구축",
         ],
         role: [
           "RAG 엔진 구축부터 에이전트 오케스트레이션까지 전체 아키텍처 설계",
-          "FastAPI astream을 이용한 실시간 답변 생성 파이프라인 단독 개발",
+          "FastAPI Async Generator를 이용한 실시간 답변 생성 파이프라인 단독 개발",
         ],
       },
       {
