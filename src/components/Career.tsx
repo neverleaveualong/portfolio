@@ -22,13 +22,32 @@ const typeColorMap: Record<string, { bg: string; text: string }> = {
 
 const defaultColor = { bg: "bg-muted/10", text: "text-muted" };
 
-const stacks = [
-  ["React", "TypeScript", "FastAPI", "GitHub Actions", "Claude Actions", "Playwright"],
-  ["React", "TypeScript", "Express", "PostgreSQL", "KIPRIS API", "Zustand"],
-];
+const companyLogoMap = {
+  hyperstar: "https://www.hyper-star.org/favicon.ico",
+  douzone: "https://www.douzone.com/favicon.ico",
+};
+
+const getCompanyLogo = (company: string) => {
+  if (company.includes("하이퍼스타") || company.includes("HyperStar")) {
+    return companyLogoMap.hyperstar;
+  }
+  if (company.includes("더존") || company.includes("Douzone")) {
+    return companyLogoMap.douzone;
+  }
+  return null;
+};
 
 export default function Career() {
   const { t } = useApp();
+  const careers = [...t.career.items].sort((a, b) => {
+    const getPriority = (period: string) => {
+      if (period.includes("예정") || period.includes("Present") || period.includes("現在")) return 0;
+      if (period.includes("2025.12") || period.includes("Dec 2025") || period.includes("2025.12")) return 1;
+      return 2;
+    };
+
+    return getPriority(a.period) - getPriority(b.period);
+  });
 
   return (
     <section id="career" className="relative px-4 sm:px-6 py-14 sm:py-16">
@@ -36,10 +55,11 @@ export default function Career() {
         <SectionHeader label={t.career.label} title={t.career.title} />
 
         <div className="space-y-4">
-          {t.career.items.map((career, i) => {
+          {careers.map((career, i) => {
             const colors = typeColorMap[career.type] || defaultColor;
+            const logo = getCompanyLogo(career.company);
             return (
-              <AnimatedSection key={i} delay={i * 0.08}>
+              <AnimatedSection key={`${career.company}-${career.period}`} delay={i * 0.08}>
                 <div className="glass group rounded-2xl p-4 sm:p-6 transition-all hover:bg-card-hover">
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     <span className={`rounded-full px-3 py-0.5 text-[11px] font-medium ${colors.bg} ${colors.text}`}>
@@ -51,6 +71,11 @@ export default function Career() {
                   </div>
 
                   <div className="mb-1 flex flex-wrap items-baseline gap-3">
+                    {logo && (
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-white p-1.5">
+                        <img src={logo} alt={`${career.company} logo`} className="h-full w-full object-contain" />
+                      </span>
+                    )}
                     <h3 className="text-lg font-bold"><ScrambleText text={career.company} speed={20} /></h3>
                     <span className="text-sm font-medium text-accent-cyan">
                       <ScrambleText text={career.role} speed={20} />
@@ -77,13 +102,6 @@ export default function Career() {
                     ))}
                   </ul>
 
-                  <div className="flex flex-wrap gap-1.5">
-                    {stacks[i]?.map((s) => (
-                      <span key={s} className="rounded-md border border-border/60 px-2 py-0.5 text-[10px] text-muted/70">
-                        {s}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </AnimatedSection>
             );

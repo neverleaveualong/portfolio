@@ -12,20 +12,26 @@ const colorMap: Record<string, string> = {
 };
 
 const techIconMap: Record<string, string> = {
-  JavaScript: "JS",
-  TypeScript: "TS",
-  React: "R",
-  "Next.js": "N",
-  "React Query": "RQ",
-  Zustand: "Z",
-  "Tailwind CSS": "TW",
-  Playwright: "PW",
-  Express: "EX",
-  FastAPI: "FA",
-  Python: "PY",
-  LangChain: "LC",
-  LangGraph: "LG",
-  Pinecone: "PC",
+  JavaScript: "https://cdn.simpleicons.org/javascript/F7DF1E",
+  TypeScript: "https://cdn.simpleicons.org/typescript/3178C6",
+  React: "https://cdn.simpleicons.org/react/61DAFB",
+  "Next.js": "https://cdn.simpleicons.org/nextdotjs/FFFFFF",
+  "React Query": "https://cdn.simpleicons.org/reactquery/FF4154",
+  Zustand: "https://cdn.simpleicons.org/zustand/FFFFFF",
+  "Tailwind CSS": "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+  Playwright: "https://cdn.simpleicons.org/playwright/2EAD33",
+  Express: "https://cdn.simpleicons.org/express/FFFFFF",
+  FastAPI: "https://cdn.simpleicons.org/fastapi/009688",
+  Python: "https://cdn.simpleicons.org/python/3776AB",
+  LangChain: "https://cdn.simpleicons.org/langchain/1C3C3C",
+  LangGraph: "https://cdn.simpleicons.org/langchain/1C3C3C",
+  Pinecone: "https://cdn.simpleicons.org/pinecone/FFFFFF",
+};
+
+const techFallbackMap: Record<string, string> = {
+  JavaScript: "JS", TypeScript: "TS", React: "R", "Next.js": "N",
+  "React Query": "RQ", Zustand: "Z", "Tailwind CSS": "TW", Playwright: "PW",
+  Express: "EX", FastAPI: "FA", Python: "PY", LangChain: "LC", LangGraph: "LG", Pinecone: "PC",
 };
 
 export default function Skills() {
@@ -36,7 +42,7 @@ export default function Skills() {
       <div className="mx-auto max-w-5xl">
         <SectionHeader label={t.skills.label} title={t.skills.title} />
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4">
           {(Object.keys(skills) as Array<keyof typeof skills>).map((key, i) => {
             const category = skills[key];
             const Icon = iconMap[key];
@@ -60,11 +66,16 @@ export default function Skills() {
                         key={item}
                         className="skill-tag flex min-h-9 items-center gap-3 rounded-lg bg-background/60 px-3 py-2 text-sm text-muted transition-colors hover:text-foreground"
                       >
-                        <span
-                          aria-hidden
-                          className="flex h-6 min-w-6 items-center justify-center rounded-md border border-border bg-card px-1 font-mono text-[10px] font-bold text-foreground"
-                        >
-                          {techIconMap[item] ?? "•"}
+                        <span className="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-border bg-card p-1">
+                          <span aria-hidden className="font-mono text-[9px] font-bold text-foreground">
+                            {techFallbackMap[item] ?? "•"}
+                          </span>
+                          <img
+                            src={techIconMap[item]}
+                            alt=""
+                            loading="lazy"
+                            className="absolute inset-1 h-4 w-4 object-contain"
+                          />
                         </span>
                         {item}
                       </span>
