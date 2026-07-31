@@ -83,7 +83,7 @@ export default function Career() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${career.company} LinkedIn page`}
-                        className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-white p-1.5 transition-opacity hover:opacity-80"
+                        className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-white p-2 transition-opacity hover:opacity-80 sm:h-16 sm:w-16"
                       >
                         <Image
                           src={brand.logo}
