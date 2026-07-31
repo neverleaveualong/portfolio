@@ -11,10 +11,15 @@ const ko = {
   hero: {
     badge: "구직 중",
     name: "심우현",
-    title: "Software Engineer (Frontend & AI Agent)",
+    title: "FullStack SW Developer",
     tagline: "시스템의 병목을 찾아 성능을 개선하고, 비즈니스 문제를 기술로 해결합니다",
     description:
       "단순한 기능 구현을 넘어 시스템의 성능 한계를 돌파하고 사용자 경험을 최적화하는 데 집중합니다. SSE 스트리밍으로 RAG 검색 Latency를 80% 단축하고, 프론트엔드 아키텍처 재설계로 초기 번들 크기를 42% 개선한 경험이 있습니다. 최근에는 자연어 분석 기반의 멀티 에이전트 시스템과 업무 자동화 워크플로우를 통해 실질적인 AX(AI 전환)를 주도하고 있습니다.",
+    descriptionBullets: [
+      "고객과 사용자의 문제를 먼저 정의하고, 기획부터 배포까지 연결합니다.",
+      "React 프론트엔드와 API·데이터 흐름을 함께 설계해 서비스의 완성도를 높입니다.",
+      "성능·테스트·문서화를 통해 운영 가능한 소프트웨어를 만듭니다.",
+    ],
     cta: "프로젝트 보기",
     email: "이메일",
     typingTexts: [

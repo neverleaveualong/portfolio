@@ -13,10 +13,15 @@ const en: Translations = {
   hero: {
     badge: "Open to work",
     name: "Woohyun Sim",
-    title: "Front-End Engineer & AI Agent Engineer",
+    title: "FullStack SW Developer",
     tagline: "Building user-facing products and AI search workflows.",
     description:
       "I build React-based user interfaces and AI search services with FastAPI and RAG pipelines. Through AI startup and ICT internship experience, I have worked on service development, QA, documentation, and deployment workflows.",
+    descriptionBullets: [
+      "I define the user problem first and connect planning, implementation, and deployment.",
+      "I design React interfaces together with API and data flows to deliver complete services.",
+      "I build maintainable software with performance, testing, and documentation in mind.",
+    ],
     cta: "View Projects",
     email: "Email",
     typingTexts: [

@@ -7,7 +7,7 @@ import { useApp } from "@/context/AppContext";
 import ScrambleText from "./ScrambleText";
 import AnimatedSection from "./AnimatedSection";
 
-const EMAIL = "wmr06244@naver.com";
+const EMAIL = "wmr06244@gmail.com";
 
 export default function Contact() {
   const { t } = useApp();
@@ -36,7 +36,7 @@ export default function Contact() {
             <ScrambleText text={t.contact.title} speed={15} />
           </h2>
           <p className="mb-2 text-muted">{t.contact.description}</p>
-          <p className="mb-10 text-sm text-muted/70">{t.contact.sub}</p>
+          <p className="mb-10 text-base text-muted">{t.contact.sub}</p>
 
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
             <a

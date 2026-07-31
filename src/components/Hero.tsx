@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, Zap } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 import { GithubIcon } from "./icons";
 import { useApp } from "@/context/AppContext";
 import TypingText from "./TypingText";
@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="grid-pattern absolute inset-0 opacity-40" />
       <InteractiveOrbs />
 
-      <div className="relative z-10 mx-auto max-w-5xl">
+      <div className="relative z-10 mx-auto w-[calc(100vw-2rem)] max-w-5xl min-w-0">
         <div className="flex flex-col items-center gap-6 sm:gap-10 md:flex-row md:items-start md:gap-14">
           {/* Photo */}
           <motion.div {...fade(0)} className="shrink-0">
@@ -43,7 +43,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Text */}
-          <div className="text-center md:text-left">
+          <div className="w-full min-w-0 text-center md:text-left">
             <motion.div
               {...fade(0.1)}
               className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs text-muted backdrop-blur-sm"
@@ -72,12 +72,17 @@ export default function Hero() {
               <TypingText texts={t.hero.typingTexts} />
             </motion.div>
 
-            <motion.p
+            <motion.ul
               {...fade(0.3)}
-              className="mb-6 max-w-xl text-[13px] leading-relaxed text-muted/70"
+              className="hero-bullet-list mb-6 w-full max-w-xl space-y-2 text-left text-sm leading-7 text-muted sm:text-base"
             >
-              <ScrambleText text={t.hero.description} speed={8} />
-            </motion.p>
+              {t.hero.descriptionBullets.map((bullet) => (
+                <li key={bullet} className="flex min-w-0 items-start gap-2">
+                  <span aria-hidden className="shrink-0 text-accent">•</span>
+                  <span className="min-w-0 break-words">{bullet}</span>
+                </li>
+              ))}
+            </motion.ul>
 
             <motion.div
               {...fade(0.35)}
@@ -103,7 +108,7 @@ export default function Hero() {
                 GitHub
               </a>
               <a
-                href="mailto:wmr06244@naver.com"
+                href="mailto:wmr06244@gmail.com"
                 className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm text-muted transition-all hover:border-muted hover:text-foreground"
               >
                 <Mail size={14} />
@@ -115,14 +120,13 @@ export default function Hero() {
 
         {/* Highlights */}
         <motion.div {...fade(0.45)} className="mt-10 glass rounded-2xl p-4 sm:p-5">
-          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="grid grid-cols-1 gap-2.5 text-sm leading-6 text-muted sm:text-base">
             {t.highlights.map((h, i) => (
-              <div key={i} className="flex items-center justify-center gap-2 text-[12px] text-muted sm:justify-start lg:whitespace-nowrap lg:text-[11px] xl:text-[12px]">
-                <Zap size={14} className="mt-0.5 shrink-0 text-accent" />
-                <span>{h}</span>
-              </div>
+              <li key={i} className="list-disc pl-2 marker:text-accent">
+                {h}
+              </li>
             ))}
-          </div>
+          </ul>
         </motion.div>
 
         {/* Stats */}
@@ -138,12 +142,12 @@ export default function Hero() {
               <div className="text-2xl font-bold text-foreground">
                 <CountUp value={stat.value} />
                 {stat.unit && (
-                  <span className="text-xs font-normal text-muted ml-0.5">
+                  <span className="text-sm font-normal text-muted ml-0.5">
                     {stat.unit}
                   </span>
                 )}
               </div>
-              <div className="mt-1 text-[11px] text-muted">{stat.label}</div>
+              <div className="mt-1 text-sm text-muted">{stat.label}</div>
             </div>
           ))}
         </motion.div>

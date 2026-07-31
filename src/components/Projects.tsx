@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ExternalLink,
-  ChevronRight,
   Sparkles,
   CheckCircle2,
   Rocket,
@@ -95,7 +94,7 @@ export default function Projects() {
                         </span>
                       </div>
                       <h3 className="text-xl sm:text-2xl font-bold"><ScrambleText text={project.title} speed={25} /></h3>
-                      <p className="mt-1 text-xs sm:text-sm text-muted"><ScrambleText text={project.subtitle} speed={12} /></p>
+                      <p className="mt-1 text-sm text-muted"><ScrambleText text={project.subtitle} speed={12} /></p>
 
                       <div className="flex items-center gap-2 mt-3">
                         {meta.github && (
@@ -137,56 +136,46 @@ export default function Projects() {
                       </div>
                     )}
 
-                    <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
                       {t.projects.oneLinerLabel}
                     </div>
-                    <p className="mb-4 text-xs sm:text-sm leading-relaxed text-muted">
+                    <p className="mb-4 text-sm leading-7 text-muted sm:text-base">
                       {project.description}
                     </p>
 
-                    <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
                       {t.projects.achievementsLabel}
                     </div>
-                    <div className="mb-4 grid gap-1.5 sm:gap-2 sm:grid-cols-2">
+                    <ul className="mb-4 grid gap-2">
                       {project.achievements.map((h, j) => (
-                        <div
+                        <li
                           key={j}
-                          className="flex items-start gap-2 rounded-lg bg-background/40 px-2.5 py-1.5 sm:px-3 sm:py-2 text-[12px] sm:text-[13px] text-muted"
+                          className="list-disc rounded-lg bg-background/40 px-3 py-2 pl-7 text-sm leading-6 text-foreground/80 marker:text-accent sm:text-base"
                         >
-                          <ChevronRight
-                            size={14}
-                            className="mt-0.5 shrink-0"
-                            style={{ color: meta.color }}
-                          />
-                          <span>{h}</span>
-                        </div>
+                          {h}
+                        </li>
                       ))}
-                    </div>
+                    </ul>
 
-                    <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
                       {t.projects.roleLabel}
                     </div>
-                    <div className="mb-4 grid gap-1.5 sm:gap-2 sm:grid-cols-2">
+                    <ul className="mb-4 grid gap-2">
                       {project.role.map((h, j) => (
-                        <div
+                        <li
                           key={j}
-                          className="flex items-start gap-2 rounded-lg bg-background/40 px-2.5 py-1.5 sm:px-3 sm:py-2 text-[12px] sm:text-[13px] text-muted"
+                          className="list-disc rounded-lg bg-background/40 px-3 py-2 pl-7 text-sm leading-6 text-foreground/80 marker:text-accent sm:text-base"
                         >
-                          <ChevronRight
-                            size={14}
-                            className="mt-0.5 shrink-0"
-                            style={{ color: meta.color }}
-                          />
-                          <span>{h}</span>
-                        </div>
+                          {h}
+                        </li>
                       ))}
-                    </div>
+                    </ul>
 
                     <div className="flex flex-wrap gap-2">
                       {meta.stack.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-md border border-border px-2.5 py-1 text-[11px] font-medium text-muted transition-colors hover:text-foreground"
+                          className="rounded-md border border-border px-2.5 py-1 text-xs font-medium text-muted transition-colors hover:text-foreground"
                         >
                           {tech}
                         </span>

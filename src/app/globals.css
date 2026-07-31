@@ -4,7 +4,7 @@
 @theme inline {
   --color-background: #09090b;
   --color-foreground: #fafafa;
-  --color-muted: #a1a1aa;
+  --color-muted: #c4c4cc;
   --color-border: #27272a;
   --color-card: #18181b;
   --color-card-hover: #1f1f23;
@@ -53,7 +53,31 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-bullet-list,
+.hero-bullet-list li {
+  max-width: 100%;
+  min-width: 0;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Keep supporting copy readable on the dark surface. */
+[class*="text-muted/70"],
+[class*="text-muted/80"] {
+  color: #c4c4cc !important;
+}
+
+[class*="text-[10px]"],
+[class*="text-[11px]"],
+[class*="text-[12px]"],
+[class*="text-[13px]"] {
+  color: #c4c4cc;
 }
 
 ::selection {

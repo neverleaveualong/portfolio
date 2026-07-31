@@ -13,10 +13,15 @@ const ja: Translations = {
   hero: {
     badge: "求職中",
     name: "シム・ウヒョン",
-    title: "Front-End Engineer & AI Agent Engineer",
+    title: "FullStack SW Developer",
     tagline: "ユーザー画面とAI検索フローを設計する開発者",
     description:
       "Reactベースのユーザー画面を設計し、FastAPIとRAGパイプラインでAI検索サービスを実装してきました。AIスタートアップとICTインターンで、サービス開発・QA・文書化・デプロイの流れを経験しました。",
+    descriptionBullets: [
+      "ユーザーの課題を先に定義し、企画からデプロイまでつなげます。",
+      "React画面とAPI・データフローを一緒に設計し、サービスを完成させます。",
+      "性能・テスト・文書化を重視し、保守しやすいソフトウェアを作ります。",
+    ],
     cta: "プロジェクトを見る",
     email: "メール",
     typingTexts: [

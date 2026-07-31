@@ -1,6 +1,5 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
 import { useApp } from "@/context/AppContext";
 import ScrambleText from "./ScrambleText";
 import SectionHeader from "./SectionHeader";
@@ -60,14 +59,13 @@ export default function Career() {
 
                   <p className="mb-4 text-sm text-muted/80">{career.description}</p>
 
-                  <div className="mb-4 grid gap-1.5 sm:grid-cols-2">
+                  <ul className="mb-4 grid gap-2">
                     {career.highlights.map((h, j) => (
-                      <div key={j} className="flex items-start gap-2 text-[13px] text-muted">
-                        <ChevronRight size={13} className="mt-0.5 shrink-0 text-accent/50" />
-                        <span>{h}</span>
-                      </div>
+                      <li key={j} className="list-disc pl-2 text-sm leading-6 text-muted marker:text-accent">
+                        {h}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
 
                   <div className="flex flex-wrap gap-1.5">
                     {stacks[i]?.map((s) => (

@@ -5,7 +5,7 @@ export const profile = {
   tagline: "기획부터 배포까지, 서비스를 완성하는 개발자",
   description:
     "React + TypeScript 기반 프로덕션 서비스를 설계하고, 체계적인 리팩토링으로 코드 품질을 끌어올립니다. B2B SaaS, 특허 분석 대시보드, RAG 파이프라인까지 — 비즈니스 가치를 만드는 개발을 합니다.",
-  email: "wmr06244@naver.com",
+  email: "wmr06244@gmail.com",
   github: "https://github.com/neverleaveualong",
   photo: "/images/profile.jpg",
 };

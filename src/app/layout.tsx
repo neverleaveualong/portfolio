@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     },
   },
   title: {
-    default: "심우현 개발자 포트폴리오 | Front-End Engineer & AI Agent Engineer",
+    default: "심우현 개발자 포트폴리오 | FullStack SW Developer",
     template: "%s | 심우현",
   },
   description:
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US", "ja_JP"],
     url: SITE_URL,
     siteName: "심우현 개발자 포트폴리오",
-    title: "심우현 개발자 포트폴리오 | Front-End Engineer & AI Agent Engineer",
+    title: "심우현 개발자 포트폴리오 | FullStack SW Developer",
     description:
       "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 정리한 심우현 개발자 포트폴리오입니다.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "심우현 개발자 포트폴리오 | Front-End Engineer & AI Agent Engineer",
+    title: "심우현 개발자 포트폴리오 | FullStack SW Developer",
     description:
       "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 정리한 심우현 개발자 포트폴리오입니다.",
   },
@@ -124,10 +124,10 @@ const jsonLd = {
       ],
       url: SITE_URL,
       image: `${SITE_URL}/images/profile.jpg`,
-      jobTitle: "Front-End Engineer & AI Agent Engineer",
+      jobTitle: "FullStack SW Developer",
       description:
         "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 보유한 개발자.",
-      email: "wmr06244@naver.com",
+      email: "wmr06244@gmail.com",
       sameAs: [
         "https://github.com/neverleaveualong",
         SITE_URL,
@@ -138,7 +138,7 @@ const jsonLd = {
       },
       hasOccupation: {
         "@type": "Occupation",
-        name: "Front-End Engineer & AI Agent Engineer",
+        name: "FullStack SW Developer",
         occupationLocation: {
           "@type": "Country",
           name: "South Korea",

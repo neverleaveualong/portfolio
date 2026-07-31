@@ -1,6 +1,5 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
 import { useApp } from "@/context/AppContext";
 import SectionHeader from "./SectionHeader";
 import AnimatedSection from "./AnimatedSection";
@@ -44,14 +43,13 @@ export default function Experience() {
 
                   <p className="mb-4 text-sm text-muted/80">{item.description}</p>
 
-                  <div className="grid gap-1.5">
+                  <ul className="grid gap-2">
                     {item.highlights.map((h) => (
-                      <div key={h} className="flex items-start gap-2 text-[13px] text-muted">
-                        <ChevronRight size={13} className="mt-0.5 shrink-0 text-accent/50" />
-                        <span>{h}</span>
-                      </div>
+                      <li key={h} className="list-disc pl-2 text-sm leading-6 text-muted marker:text-accent">
+                        {h}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </AnimatedSection>
             );
