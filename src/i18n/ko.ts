@@ -9,7 +9,7 @@ const ko = {
     contact: "연락",
   },
   hero: {
-    badge: "구직 중",
+    badge: "처우 협의 중",
     name: "심우현",
     title: "FullStack SW Developer",
     tagline: "시스템의 병목을 찾아 성능을 개선하고, 비즈니스 문제를 기술로 해결합니다",
