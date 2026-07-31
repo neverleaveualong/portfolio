@@ -41,8 +41,18 @@ export default function Experience() {
                     <span className="text-sm font-medium text-accent-cyan">{item.role}</span>
                   </div>
 
-                  <p className="mb-4 text-sm text-muted/80">{item.description}</p>
+                  <div className="mb-4 space-y-3 text-sm leading-6">
+                    <div>
+                      <p className="mb-1 text-xs font-semibold text-accent">{t.experience.overviewLabel}</p>
+                      <p className="text-muted">{item.description}</p>
+                    </div>
+                    <div>
+                      <p className="mb-1 text-xs font-semibold text-accent">{t.experience.roleLabel}</p>
+                      <p className="text-muted">{item.role}</p>
+                    </div>
+                  </div>
 
+                  <p className="mb-1 text-xs font-semibold text-accent">{t.experience.achievementLabel}</p>
                   <ul className="grid gap-2">
                     {item.highlights.map((h) => (
                       <li key={h} className="list-disc pl-2 text-sm leading-6 text-muted marker:text-accent">

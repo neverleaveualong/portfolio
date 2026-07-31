@@ -46,6 +46,9 @@ const ja: Translations = {
   career: {
     label: "Experience",
     title: "経歴",
+    overviewLabel: "概要",
+    roleLabel: "役割",
+    achievementLabel: "成果",
     items: [
       {
         company: "HyperStar (KAISTスタートアップ)",
@@ -80,6 +83,9 @@ const ja: Translations = {
   experience: {
     label: "Experience Plus",
     title: "教育・運用経験",
+    overviewLabel: "概要",
+    roleLabel: "役割",
+    achievementLabel: "成果",
     items: [
       {
         title: "Programmers DevCourse 6th",
@@ -117,6 +123,11 @@ const ja: Translations = {
     oneLinerLabel: "一行紹介",
     achievementsLabel: "主な成果",
     roleLabel: "担当役割",
+    overviewLabel: "概要",
+    currentStateLabel: "現状",
+    problemLabel: "問題定義",
+    solutionLabel: "解決策",
+    impactLabel: "期待効果",
     items: [
       {
         title: "TechLens",

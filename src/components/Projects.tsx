@@ -136,18 +136,32 @@ export default function Projects() {
                       </div>
                     )}
 
-                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                      {t.projects.oneLinerLabel}
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                      {t.projects.overviewLabel}
                     </div>
                     <p className="mb-4 text-sm leading-7 text-muted sm:text-base">
                       {project.description}
                     </p>
 
-                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                      {t.projects.achievementsLabel}
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                      {t.projects.currentStateLabel}
+                    </div>
+                    <p className="mb-4 rounded-lg bg-background/40 px-3 py-2 text-sm leading-6 text-foreground/80 sm:text-base">
+                      {project.achievements[0]}
+                    </p>
+
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                      {t.projects.problemLabel}
+                    </div>
+                    <p className="mb-4 rounded-lg bg-background/40 px-3 py-2 text-sm leading-6 text-foreground/80 sm:text-base">
+                      {project.achievements[1]}
+                    </p>
+
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                      {t.projects.solutionLabel}
                     </div>
                     <ul className="mb-4 grid gap-2">
-                      {project.achievements.map((h, j) => (
+                      {project.achievements.slice(2).map((h, j) => (
                         <li
                           key={j}
                           className="list-disc rounded-lg bg-background/40 px-3 py-2 pl-7 text-sm leading-6 text-foreground/80 marker:text-accent sm:text-base"
@@ -157,8 +171,8 @@ export default function Projects() {
                       ))}
                     </ul>
 
-                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                      {t.projects.roleLabel}
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                      {t.projects.impactLabel}
                     </div>
                     <ul className="mb-4 grid gap-2">
                       {project.role.map((h, j) => (

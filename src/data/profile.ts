@@ -1,10 +1,10 @@
 export const profile = {
   name: "심우현",
   nameEn: "Sim Woohyun",
-  title: "Frontend-focused Full-stack Developer",
-  tagline: "기획부터 배포까지, 서비스를 완성하는 개발자",
+  title: "FullStack SW Developer",
+  tagline: "도메인의 문제를 파악하고 서비스로 풀어내는 개발자",
   description:
-    "React + TypeScript 기반 프로덕션 서비스를 설계하고, 체계적인 리팩토링으로 코드 품질을 끌어올립니다. B2B SaaS, 특허 분석 대시보드, RAG 파이프라인까지 — 비즈니스 가치를 만드는 개발을 합니다.",
+    "고객사가 필요로 하는 서비스를 주도적으로 기획하고, 프론트엔드부터 백엔드·AI Agent까지 연결해 해결합니다.",
   email: "wmr06244@gmail.com",
   github: "https://github.com/neverleaveualong",
   photo: "/images/profile.jpg",
@@ -18,64 +18,41 @@ export const stats = [
 ];
 
 export const highlights = [
-  "B2B SaaS 프로덕션 서비스 개발 경험",
-  "15단계 + 14단계 체계적 리팩토링 수행",
-  "Claude Code 활용 개발 자동화 및 생산성 극대화",
-  "RAG 파이프라인 직접 설계 · 구현",
+  "Zustand + React Query로 클라이언트 상태와 서버 상태를 분리하고 이해하기 쉬운 데이터 흐름을 설계",
+  "계층형 아키텍처를 바탕으로 백엔드 API와 데이터 접근 구조를 직접 구축",
+  "LangGraph 기반 멀티 에이전트 프로젝트로 특허 분석 AX 업무를 설계",
+  "AI를 적극 활용해 반복 업무를 자동화하는 개발 워크플로우 도입",
 ];
 
 export const skills = {
   frontend: {
-    label: "Front-End Engineering",
+    label: "Frontend",
     items: [
-      "React 19",
-      "Next.js",
+      "JavaScript",
       "TypeScript",
-      "TanStack Query",
+      "React",
+      "Next.js",
+      "React Query",
       "Zustand",
       "Tailwind CSS",
-      "Chart.js",
-      "Vitest",
       "Playwright",
     ],
   },
   backend: {
-    label: "API & Data",
+    label: "Backend",
     items: [
       "Express",
       "FastAPI",
-      "PostgreSQL",
-      "REST API",
-      "Raw SQL",
-      "Zod",
-      "JWT Auth",
-      "API Integration",
+      "Python",
+      "TypeScript",
     ],
   },
   ai: {
-    label: "AI Agent & RAG",
+    label: "AI Agent",
     items: [
-      "RAG Pipeline",
       "LangChain",
+      "LangGraph",
       "Pinecone",
-      "BM25 + Vector Search",
-      "RAGAS",
-      "HuggingFace Embeddings",
-      "Prompt Engineering",
-      "OpenAI API",
-    ],
-  },
-  devops: {
-    label: "Delivery & Collaboration",
-    items: [
-      "Git / GitHub",
-      "GitHub Actions CI",
-      "Vercel",
-      "Render",
-      "Docker",
-      "AWS EC2/S3",
-      "Linux",
-      "Claude Code",
     ],
   },
 };

@@ -46,6 +46,9 @@ const en: Translations = {
   career: {
     label: "Experience",
     title: "Career",
+    overviewLabel: "Overview",
+    roleLabel: "Role",
+    achievementLabel: "Outcome",
     items: [
       {
         company: "HyperStar (KAIST Startup)",
@@ -80,6 +83,9 @@ const en: Translations = {
   experience: {
     label: "Experience Plus",
     title: "Education & Operations",
+    overviewLabel: "Overview",
+    roleLabel: "Role",
+    achievementLabel: "Outcome",
     items: [
       {
         title: "Programmers DevCourse 6th",
@@ -117,6 +123,11 @@ const en: Translations = {
     oneLinerLabel: "One-liner",
     achievementsLabel: "Key Outcomes",
     roleLabel: "My Role",
+    overviewLabel: "Overview",
+    currentStateLabel: "Current State",
+    problemLabel: "Problem",
+    solutionLabel: "Solution",
+    impactLabel: "Expected Impact",
     items: [
       {
         title: "TechLens",

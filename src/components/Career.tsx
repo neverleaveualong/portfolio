@@ -57,8 +57,18 @@ export default function Career() {
                     </span>
                   </div>
 
-                  <p className="mb-4 text-sm text-muted/80">{career.description}</p>
+                  <div className="mb-4 space-y-3 text-sm leading-6">
+                    <div>
+                      <p className="mb-1 text-xs font-semibold text-accent">{t.career.overviewLabel}</p>
+                      <p className="text-muted">{career.description}</p>
+                    </div>
+                    <div>
+                      <p className="mb-1 text-xs font-semibold text-accent">{t.career.roleLabel}</p>
+                      <p className="text-muted">{career.role}</p>
+                    </div>
+                  </div>
 
+                  <p className="mb-1 text-xs font-semibold text-accent">{t.career.achievementLabel}</p>
                   <ul className="mb-4 grid gap-2">
                     {career.highlights.map((h, j) => (
                       <li key={j} className="list-disc pl-2 text-sm leading-6 text-muted marker:text-accent">
