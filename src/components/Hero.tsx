@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown, ExternalLink, Mail } from "lucide-react";
 import { GithubIcon } from "./icons";
 import { useApp } from "@/context/AppContext";
 import TypingText from "./TypingText";
-import CountUp from "./CountUp";
 import ScrambleText from "./ScrambleText";
 import InteractiveOrbs from "./InteractiveOrbs";
 
@@ -18,6 +17,32 @@ const fade = (delay: number) => ({
 
 export default function Hero() {
   const { t } = useApp();
+  const quickProjects = [
+    {
+      name: "HyperStar",
+      description: "AI 인플루언서 마케팅 SaaS",
+      github: null,
+      demo: "https://hyper-star.org",
+    },
+    {
+      name: "TechDocs",
+      description: "AI 특허 검색 플랫폼",
+      github: "https://github.com/neverleaveualong/TechDocs",
+      demo: "https://techdocs-app.vercel.app",
+    },
+    {
+      name: "TechLens",
+      description: "특허 분석 B2B 솔루션",
+      github: "https://github.com/Douzone-Keycom-Internship-woohyun-2025",
+      demo: "https://techlens-app.vercel.app/",
+    },
+    {
+      name: "PlayceV",
+      description: "스포츠 중계 식당 탐색 서비스",
+      github: "https://github.com/neverleaveualong/PlayceV",
+      demo: "https://playce-app.vercel.app",
+    },
+  ];
 
   return (
     <section
@@ -118,38 +143,45 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Highlights */}
-        <motion.div {...fade(0.45)} className="mt-10 glass rounded-2xl p-4 sm:p-5">
-          <ul className="grid grid-cols-1 gap-2.5 text-sm leading-6 text-muted sm:text-base">
-            {t.highlights.map((h, i) => (
-              <li key={i} className="list-disc pl-2 marker:text-accent">
-                {h}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          {...fade(0.55)}
-          className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4"
-        >
-          {t.stats.map((stat, i) => (
-            <div
-              key={i}
-              className="glass rounded-xl px-3 py-3 sm:px-5 sm:py-4 text-center transition-colors hover:bg-card-hover"
-            >
-              <div className="text-2xl font-bold text-foreground">
-                <CountUp value={stat.value} />
-                {stat.unit && (
-                  <span className="text-sm font-normal text-muted ml-0.5">
-                    {stat.unit}
-                  </span>
-                )}
+        <motion.div {...fade(0.45)} className="mt-10">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            {t.hero.quickLinksLabel}
+          </p>
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            {quickProjects.map((project) => (
+              <div
+                key={project.name}
+                className="glass flex min-w-0 items-center justify-between gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-card-hover"
+              >
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-semibold text-foreground">{project.name}</p>
+                  <p className="truncate text-xs text-muted">{project.description}</p>
+                </div>
+                <div className="flex shrink-0 items-center gap-1">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.name} GitHub`}
+                      className="flex h-8 w-8 items-center justify-center rounded-lg text-muted transition-colors hover:bg-card-hover hover:text-foreground"
+                    >
+                      <GithubIcon size={15} />
+                    </a>
+                  )}
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.name} Demo`}
+                    className="flex h-8 w-8 items-center justify-center rounded-lg text-muted transition-colors hover:bg-card-hover hover:text-foreground"
+                  >
+                    <ExternalLink size={15} />
+                  </a>
+                </div>
               </div>
-              <div className="mt-1 text-sm text-muted">{stat.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </motion.div>
       </div>
 

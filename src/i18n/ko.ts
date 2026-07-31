@@ -21,6 +21,7 @@ const ko = {
       "AI Agent를 활용한 AX 프로젝트와 자동화 워크플로우까지 직접 설계하고 구현할 수 있습니다.",
     ],
     cta: "프로젝트 보기",
+    quickLinksLabel: "주요 프로젝트 바로가기",
     email: "이메일",
     typingTexts: [
       "시스템 병목을 찾아 성능을 개선합니다",

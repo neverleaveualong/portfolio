@@ -23,6 +23,7 @@ const en: Translations = {
       "I build maintainable software with performance, testing, and documentation in mind.",
     ],
     cta: "View Projects",
+    quickLinksLabel: "Featured Projects",
     email: "Email",
     typingTexts: [
       "I build React frontends and FastAPI backends",

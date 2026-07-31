@@ -23,6 +23,7 @@ const ja: Translations = {
       "性能・テスト・文書化を重視し、保守しやすいソフトウェアを作ります。",
     ],
     cta: "プロジェクトを見る",
+    quickLinksLabel: "主なプロジェクト",
     email: "メール",
     typingTexts: [
       "ReactフロントエンドからFastAPIバックエンドまで扱います",
