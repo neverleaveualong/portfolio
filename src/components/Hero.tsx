@@ -147,15 +147,15 @@ export default function Hero() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
             {t.hero.quickLinksLabel}
           </p>
-          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-2">
             {quickProjects.map((project) => (
               <div
                 key={project.name}
-                className="glass flex min-w-0 items-center justify-between gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-card-hover"
+                className="glass grid min-w-0 gap-2 rounded-xl px-4 py-3 transition-colors hover:bg-card-hover sm:grid-cols-[1fr_auto] sm:items-center"
               >
                 <div className="min-w-0">
                   <p className="truncate text-sm font-semibold text-foreground">{project.name}</p>
-                  <p className="truncate text-xs text-muted">{project.description}</p>
+                  <p className="text-sm leading-6 text-muted">{project.description}</p>
                 </div>
                 <div className="flex shrink-0 items-center gap-1">
                   {project.github && (
