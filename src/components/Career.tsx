@@ -76,14 +76,20 @@ export default function Career() {
                     </span>
                   </div>
 
-                  <div className="mb-1 flex flex-wrap items-baseline gap-3">
+                  <div className="mb-1 flex items-center justify-between gap-3">
+                    <div className="flex min-w-0 flex-wrap items-baseline gap-3">
+                      <h3 className="text-lg font-bold"><ScrambleText text={career.company} speed={20} /></h3>
+                      <span className="text-sm font-medium text-accent-cyan">
+                        <ScrambleText text={career.role} speed={20} />
+                      </span>
+                    </div>
                     {brand && (
                       <a
                         href={brand.linkedIn}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${career.company} LinkedIn page`}
-                        className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-white p-2 transition-opacity hover:opacity-80 sm:h-16 sm:w-16"
+                        className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border bg-white p-1 transition-opacity hover:opacity-80"
                       >
                         <Image
                           src={brand.logo}
@@ -95,10 +101,6 @@ export default function Career() {
                         />
                       </a>
                     )}
-                    <h3 className="text-lg font-bold"><ScrambleText text={career.company} speed={20} /></h3>
-                    <span className="text-sm font-medium text-accent-cyan">
-                      <ScrambleText text={career.role} speed={20} />
-                    </span>
                   </div>
 
                   <div className="mb-4 space-y-3 text-sm leading-6">
