@@ -1,6 +1,7 @@
 "use client";
 
 import { useApp } from "@/context/AppContext";
+import Image from "next/image";
 import ScrambleText from "./ScrambleText";
 import SectionHeader from "./SectionHeader";
 import AnimatedSection from "./AnimatedSection";
@@ -24,15 +25,20 @@ const defaultColor = { bg: "bg-muted/10", text: "text-muted" };
 
 const companyLogoMap = {
   hyperstar: "https://www.hyper-star.org/favicon.ico",
-  douzone: "https://www.douzone.com/favicon.ico",
+  douzone: "https://en.douzone.com/en/images/img_signature_eng%402x.png",
 };
 
-const getCompanyLogo = (company: string) => {
+const companyLinkedInMap = {
+  hyperstar: "https://www.linkedin.com/company/hyperstar-ai",
+  douzone: "https://kr.linkedin.com/company/douzone",
+};
+
+const getCompanyBrand = (company: string) => {
   if (company.includes("하이퍼스타") || company.includes("HyperStar")) {
-    return companyLogoMap.hyperstar;
+    return { logo: companyLogoMap.hyperstar, linkedIn: companyLinkedInMap.hyperstar };
   }
   if (company.includes("더존") || company.includes("Douzone")) {
-    return companyLogoMap.douzone;
+    return { logo: companyLogoMap.douzone, linkedIn: companyLinkedInMap.douzone };
   }
   return null;
 };
@@ -57,7 +63,7 @@ export default function Career() {
         <div className="space-y-4">
           {careers.map((career, i) => {
             const colors = typeColorMap[career.type] || defaultColor;
-            const logo = getCompanyLogo(career.company);
+            const brand = getCompanyBrand(career.company);
             return (
               <AnimatedSection key={`${career.company}-${career.period}`} delay={i * 0.08}>
                 <div className="glass group rounded-2xl p-4 sm:p-6 transition-all hover:bg-card-hover">
@@ -71,10 +77,23 @@ export default function Career() {
                   </div>
 
                   <div className="mb-1 flex flex-wrap items-baseline gap-3">
-                    {logo && (
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-white p-1.5">
-                        <img src={logo} alt={`${career.company} logo`} className="h-full w-full object-contain" />
-                      </span>
+                    {brand && (
+                      <a
+                        href={brand.linkedIn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${career.company} LinkedIn page`}
+                        className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-white p-1.5 transition-opacity hover:opacity-80"
+                      >
+                        <Image
+                          src={brand.logo}
+                          alt={`${career.company} logo`}
+                          width={32}
+                          height={32}
+                          unoptimized
+                          className="h-full w-full object-contain"
+                        />
+                      </a>
                     )}
                     <h3 className="text-lg font-bold"><ScrambleText text={career.company} speed={20} /></h3>
                     <span className="text-sm font-medium text-accent-cyan">

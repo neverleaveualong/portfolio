@@ -1,6 +1,7 @@
 "use client";
 
 import { Code2, Server, Brain } from "lucide-react";
+import Image from "next/image";
 import { skills } from "@/data/profile";
 import { useApp } from "@/context/AppContext";
 import SectionHeader from "./SectionHeader";
@@ -70,9 +71,12 @@ export default function Skills() {
                           <span aria-hidden className="font-mono text-[9px] font-bold text-foreground">
                             {techFallbackMap[item] ?? "•"}
                           </span>
-                          <img
+                          <Image
                             src={techIconMap[item]}
                             alt=""
+                            width={16}
+                            height={16}
+                            unoptimized
                             loading="lazy"
                             className="absolute inset-1 h-4 w-4 object-contain"
                           />
