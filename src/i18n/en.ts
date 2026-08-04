@@ -12,7 +12,7 @@ const en: Translations = {
   },
   hero: {
     badge: "Open to work",
-    name: "Woohyun Sim",
+    name: "Sim Woohyun (심우현)",
     title: "FullStack SW Developer",
     tagline: "Building user-facing products and AI search workflows.",
     description:

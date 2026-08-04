@@ -12,7 +12,7 @@ const ja: Translations = {
   },
   hero: {
     badge: "求職中",
-    name: "シム・ウヒョン",
+    name: "シム・ウヒョン (심우현)",
     title: "FullStack SW Developer",
     tagline: "ユーザー画面とAI検索フローを設計する開発者",
     description:

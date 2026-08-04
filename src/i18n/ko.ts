@@ -10,7 +10,7 @@ const ko = {
   },
   hero: {
     badge: "입사 예정",
-    name: "심우현",
+    name: "심우현 (Sim Woohyun)",
     title: "FullStack SW Developer",
     tagline: "시스템의 병목을 찾아 성능을 개선하고, 비즈니스 문제를 기술로 해결합니다",
     description:

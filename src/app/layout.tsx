@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | 심우현",
   },
   description:
-    "심우현 개발자 포트폴리오입니다. React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 정리했습니다.",
+    "풀스택 소프트웨어 개발자 심우현(Sim Woohyun)의 포트폴리오입니다. React 프론트엔드, FastAPI, RAG 기반 AI 검색과 AI Agent 개발 경험을 정리했습니다.",
   keywords: [
     "심우현",
     "심우현 개발자",
@@ -61,13 +61,13 @@ export const metadata: Metadata = {
     siteName: "심우현 개발자 포트폴리오",
     title: "심우현 개발자 포트폴리오 | FullStack SW Developer",
     description:
-      "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 정리한 심우현 개발자 포트폴리오입니다.",
+      "풀스택 소프트웨어 개발자 심우현(Sim Woohyun)의 React, FastAPI, RAG 기반 AI 검색 및 AI Agent 개발 포트폴리오입니다.",
   },
   twitter: {
     card: "summary_large_image",
     title: "심우현 개발자 포트폴리오 | FullStack SW Developer",
     description:
-      "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 정리한 심우현 개발자 포트폴리오입니다.",
+      "풀스택 소프트웨어 개발자 심우현(Sim Woohyun)의 React, FastAPI, RAG 기반 AI 검색 및 AI Agent 개발 포트폴리오입니다.",
   },
   robots: {
     index: true,
@@ -110,10 +110,13 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${SITE_URL}/#person`,
       name: "심우현",
+      givenName: "우현",
+      familyName: "심",
       alternateName: [
         "심우현 개발자",
         "심우현 포트폴리오",
         "Sim Woohyun",
+        "심우현 Sim Woohyun",
         "simwoohyun",
         "Woohyun Sim",
       ],
@@ -121,7 +124,7 @@ const jsonLd = {
       image: `${SITE_URL}/images/profile.jpg`,
       jobTitle: "FullStack SW Developer",
       description:
-        "React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 보유한 개발자.",
+        "강원대학교 컴퓨터공학과를 전공하고 React 프론트엔드, FastAPI, RAG 기반 AI 검색, AI Agent 개발 경험을 보유한 풀스택 소프트웨어 개발자.",
       email: "wmr06244@gmail.com",
       sameAs: [
         "https://github.com/neverleaveualong",
