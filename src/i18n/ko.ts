@@ -100,6 +100,20 @@ const ko = {
     achievementLabel: "성과",
     items: [
       {
+        title: "SK AX AI Leader Academy (SKALA) 4기",
+        role: "AI·데이터·풀스택 실무 교육",
+        period: "2026.07 — 2026.08",
+        type: "교육",
+        description:
+          "SK AX AI 인재 양성 과정에서 소프트웨어 개발과 데이터·생성형 AI를 연결하는 실무 중심 교육을 이수하고 있습니다.",
+        highlights: [
+          "Git과 HTML·CSS·JavaScript 기반 웹 개발 기초 학습",
+          "Python을 활용한 데이터 분석과 기초통계 실습",
+          "프롬프트·컨텍스트 설계 및 LLM·Transformer 아키텍처 학습",
+          "Java·Spring Boot REST API부터 MSA·sLLM까지 이어지는 실무 커리큘럼 이수 중",
+        ],
+      },
+      {
         title: "프로그래머스 데브코스 6기",
         role: "웹 풀 사이클 개발 과정 (TypeScript)",
         period: "2025.01 — 2025.07",

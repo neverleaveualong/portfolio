@@ -89,6 +89,20 @@ const en: Translations = {
     achievementLabel: "Outcome",
     items: [
       {
+        title: "SK AX AI Leader Academy (SKALA), 4th Cohort",
+        role: "Practical AI, Data & Full-stack Training",
+        period: "Jul — Aug 2026",
+        type: "Program",
+        description:
+          "Currently completing an SK AX training program focused on connecting software development with data and generative AI.",
+        highlights: [
+          "Studied Git and web development fundamentals with HTML, CSS, and JavaScript",
+          "Practiced Python-based data analysis and introductory statistics",
+          "Studied prompt and context design, LLMs, and Transformer architecture",
+          "Progressing through a practical curriculum spanning Java and Spring Boot REST APIs, MSA, and sLLMs",
+        ],
+      },
+      {
         title: "Programmers DevCourse 6th",
         role: "Full-cycle Web Development",
         period: "Jan — Jul 2025",

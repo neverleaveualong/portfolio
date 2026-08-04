@@ -23,7 +23,7 @@ export default function Experience() {
       <div className="mx-auto max-w-4xl">
         <SectionHeader label={t.experience.label} title={t.experience.title} />
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4">
           {t.experience.items.map((item, i) => {
             const colors = typeColorMap[item.type] || defaultColor;
             return (

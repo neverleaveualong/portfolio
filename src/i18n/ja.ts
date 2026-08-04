@@ -89,6 +89,20 @@ const ja: Translations = {
     achievementLabel: "成果",
     items: [
       {
+        title: "SK AX AI Leader Academy (SKALA) 4期",
+        role: "AI・データ・フルスタック実務教育",
+        period: "2026.07 — 2026.08",
+        type: "教育",
+        description:
+          "SK AXのAI人材育成課程で、ソフトウェア開発とデータ・生成AIを結ぶ実務中心の教育を受講しています。",
+        highlights: [
+          "GitとHTML・CSS・JavaScriptによるWeb開発基礎を学習",
+          "Pythonを活用したデータ分析と基礎統計を実習",
+          "プロンプト・コンテキスト設計とLLM・Transformerアーキテクチャを学習",
+          "Java・Spring Boot REST APIからMSA・sLLMへ続く実務カリキュラムを受講中",
+        ],
+      },
+      {
         title: "Programmers DevCourse 6th",
         role: "Webフルサイクル開発課程",
         period: "2025.01 — 2025.07",
