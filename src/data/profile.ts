@@ -7,6 +7,7 @@ export const profile = {
     "고객사가 필요로 하는 서비스를 주도적으로 기획하고, 프론트엔드부터 백엔드·AI Agent까지 연결해 해결합니다.",
   email: "wmr06244@gmail.com",
   github: "https://github.com/neverleaveualong",
+  linkedin: "https://www.linkedin.com/in/%EC%9A%B0%ED%98%84-%EC%8B%AC-456796324/",
   photo: "/images/profile.jpg",
 };
 
@@ -261,6 +262,11 @@ export const education = {
     { name: "TOEIC 860", org: "ETS" },
   ],
   activities: [
+    {
+      name: "SKALA 4기",
+      desc: "AI·데이터·풀스택 실무 집중 과정",
+      period: "2026.07 — 2026.08",
+    },
     {
       name: "AWS Solutions Architect Associate 과정",
       desc: "클라우드 아키텍처 설계 심화",

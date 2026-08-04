@@ -237,6 +237,7 @@ const ko = {
       { name: "TOEIC 785", org: "ETS" },
     ],
     activities: [
+      { name: "SKALA 4기", desc: "AI·데이터·풀스택 실무 집중 과정", period: "2026.07 — 2026.08" },
       { name: "AWS Solutions Architect Associate 과정", desc: "클라우드 아키텍처 설계 심화", period: "2025.11" },
       { name: "프로그래머스 데브코스 6기", desc: "실무형 풀스택 프로젝트 + 팀 협업", period: "2025.01 — 2025.07" },
       { name: "University of Waikato 어학연수", desc: "글로벌 커뮤니케이션 역량 강화", period: "2024.07" },

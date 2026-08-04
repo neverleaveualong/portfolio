@@ -235,6 +235,7 @@ const en: Translations = {
       { name: "TOEIC 785", org: "ETS" },
     ],
     activities: [
+      { name: "SKALA 4th Cohort", desc: "Intensive AI, data & full-stack training", period: "2026.07 — 2026.08" },
       { name: "AWS Solutions Architect Associate", desc: "Cloud architecture design", period: "2025.11" },
       { name: "Programmers DevCourse 6th", desc: "Production full-stack project & team collaboration", period: "2025.01 — 2025.07" },
       { name: "University of Waikato Exchange", desc: "Global communication skills", period: "2024.07" },

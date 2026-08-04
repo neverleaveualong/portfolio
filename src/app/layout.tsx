@@ -128,6 +128,7 @@ const jsonLd = {
       email: "wmr06244@gmail.com",
       sameAs: [
         "https://github.com/neverleaveualong",
+        "https://www.linkedin.com/in/%EC%9A%B0%ED%98%84-%EC%8B%AC-456796324/",
         SITE_URL,
       ],
       worksFor: {

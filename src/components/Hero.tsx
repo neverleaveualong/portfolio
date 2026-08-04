@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, ExternalLink, Mail } from "lucide-react";
-import { GithubIcon } from "./icons";
+import { GithubIcon, LinkedInIcon } from "./icons";
 import { useApp } from "@/context/AppContext";
 import TypingText from "./TypingText";
 import ScrambleText from "./ScrambleText";
@@ -131,6 +131,16 @@ export default function Hero() {
               >
                 <GithubIcon size={14} />
                 GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/%EC%9A%B0%ED%98%84-%EC%8B%AC-456796324/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
+                className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm text-muted transition-all hover:border-muted hover:text-foreground"
+              >
+                <LinkedInIcon size={14} />
+                LinkedIn
               </a>
               <a
                 href="mailto:wmr06244@gmail.com"

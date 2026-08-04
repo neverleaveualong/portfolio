@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Mail, ArrowUpRight, Copy, Check } from "lucide-react";
-import { GithubIcon } from "./icons";
+import { GithubIcon, LinkedInIcon } from "./icons";
 import { useApp } from "@/context/AppContext";
 import ScrambleText from "./ScrambleText";
 import AnimatedSection from "./AnimatedSection";
@@ -74,6 +74,16 @@ export default function Contact() {
             >
               <GithubIcon size={16} />
               GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/%EC%9A%B0%ED%98%84-%EC%8B%AC-456796324/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm text-muted transition-all hover:border-muted hover:text-foreground"
+            >
+              <LinkedInIcon size={16} />
+              LinkedIn
             </a>
           </div>
         </AnimatedSection>

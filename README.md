@@ -42,3 +42,4 @@ Vercel에 배포되어 있으며, GitHub 저장소와 연결되어 있습니다.
 
 - Portfolio: https://simwoohyun.vercel.app
 - GitHub: https://github.com/neverleaveualong
+- LinkedIn: https://www.linkedin.com/in/%EC%9A%B0%ED%98%84-%EC%8B%AC-456796324/

@@ -235,6 +235,7 @@ const ja: Translations = {
       { name: "TOEIC 785", org: "ETS" },
     ],
     activities: [
+      { name: "SKALA 4期", desc: "AI・データ・フルスタック実務集中課程", period: "2026.07 — 2026.08" },
       { name: "AWS Solutions Architect Associate", desc: "クラウドアーキテクチャ設計", period: "2025.11" },
       { name: "Programmers DevCourse 6th", desc: "実務型フルスタックプロジェクト", period: "2025.01 — 2025.07" },
       { name: "University of Waikato 語学研修", desc: "グローバルコミュニケーション", period: "2024.07" },
